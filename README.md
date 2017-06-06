@@ -54,6 +54,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     # HashOver requires PHP running on the server
     # and cannot be hosted on a different domain
     hashover = false
+    RSSLink = "http://feeds.feedburner.com/yoursite.xml"
 
     custom_css = ["/css/powershellconsole.css" ]
 	# custom_js_head = [""]		# Javascript URL's to place inside <script src=> tags in the header

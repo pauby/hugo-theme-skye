@@ -67,6 +67,14 @@ Controls whether the site uses [Hashover](http://tildehash.com/?page=hashover) c
 hashover = false
 ```
 
+### RSSLink
+
+The URL for your site RSS feed.
+
+``` toml
+RSSLink = "http://feeds.specificfeeds.com/pauby"
+```
+
 ### custom_css
 
 This array allows you to add CSS files your site without the need to edit any files. When creating the pages for your site each URL you place in here is wrapped in  `<link rel="stylesheet" type="text/css" href="...">` and included at the end of the `<head>` section of your page. For example, this variable:
