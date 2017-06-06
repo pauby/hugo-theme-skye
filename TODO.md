@@ -1,3 +1,15 @@
+# Hugo Theme - Skye
+
+## Documentation
+
+- [ ] Update docs
+
+## Layouts
+
+- [ ] Update / create / amend / assess SEO
+
+This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/BluestNight) project.
+
 ## Widgets
 
 - [ ] Add a blogroll / favorite links menu widget in the sidebar - .fi-link icon?
