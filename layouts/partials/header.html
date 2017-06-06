@@ -18,7 +18,9 @@
     {{ end }}
     <link rel="canonical" href="{{ .URL | absURL }}">
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/foundation/foundation-icons.css">
+{{ if ($.Site.Params.hashover) }}
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}hashover/comments.css">
+{{ end }}
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}styles.css">
 {{ range .Site.Params.custom_local_css }}
     <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}{{ . }}" />
