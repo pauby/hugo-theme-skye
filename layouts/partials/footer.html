@@ -46,7 +46,7 @@
     </footer>
   </div>
 {{ range .Site.Params.custom_js_foot }}
-  <script src="{{ . }}"></script>
+  <script src="{{ . | absURL }}"></script>
 {{ end }}
 </body>
 </html>
