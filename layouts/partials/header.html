@@ -20,6 +20,13 @@
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/foundation/foundation-icons.css">
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}hashover/comments.css">
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}styles.css">
+{{ range .Site.Params.custom_local_css }}
+    <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}{{ . }}" />
+{{ end }}
+{{ range .Site.Params.custom_local_js_header }}
+    <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+{{ end }}
+{{ partial "extra-in-head.html" }}
   </head>
   <body>
     <div id="site-container">
