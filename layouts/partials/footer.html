@@ -44,9 +44,9 @@
         </a>{{ end }}
       </div>
     </footer>
-{{ range .Site.Params.custom_local_js_footer }}
-    <script src="{{ . }}"></script>
-{{ end }}
   </div>
+{{ range .Site.Params.custom_js_foot }}
+  <script src="{{ . }}"></script>
+{{ end }}
 </body>
 </html>
