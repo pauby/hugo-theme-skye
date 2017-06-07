@@ -20,6 +20,14 @@ Site descrioption that appears in search engines.
 description = "Here is a description of my site that will appear in search engine results - W00t!"
 ```
 
+### cover
+
+Site wide cover image used by OpenGraph as `og:image` property. Within content the value of the `image` variable is used.
+
+``` toml
+cover = "/images/cover.jpg"
+```
+
 ### authorbox
 
 The authorbox provides attribution to the author of a given post. To enable
@@ -73,6 +81,14 @@ The URL for your site RSS feed.
 
 ``` toml
 RSSLink = "http://feeds.specificfeeds.com/pauby"
+```
+
+### GoogleAnalyticsUserID
+
+Enter your Google Analytics User ID here to allow site stats to be collected. If this variable is not present or you are running on localhost not analytics will be collected.
+
+``` toml
+GoogleAnalyticsUserID = "AB-12345678-1"
 ```
 
 ### custom_css
@@ -212,21 +228,23 @@ a line setting `hide_list` to `true` in the front matter of `_index.md`.
 BluestNight supports linking to a number of popular social sites from icons in
 the site footer. If the service normally uses usernames prefixed with an "@",
 your username should be entered *without* one. Currently supported are:
-- DeviantArt (`deviantart = "username"`)
-- Facebook (`facebook = "userid"`)
-  - Your Facebook user id is what comes after "https://facebook.com/" on your
-    public profile page
-- GitHub (`github = "username"`)
-- Google Plus (`googleplus = "+Joe-Smith"`)
-- Instagram (`instagram = "username"`)
-- LinkedIn (`linkedin = "userid"`)
-- Pinterest (`pinterest = "username"`)
-  - Your username is whatever follows "https://pinterest.com/" on your profile page
-- Reddit (`reddit = "username"`)
-- Spotify (`spotify = "username"`)
-- Tumblr (`tumblr = "username"`)
-- Twitter (`twitter = "username"`)
-- Steam (`steam = "userid"`)
+
+``` toml
+deviantart = "username"
+# Your Facebook user id is what comes after "https://facebook.com/" on your public profile page
+facebook = "userid" 
+github = "userid"
+googleplus = "+name-surname"
+instagram = "username"
+linkedin = "userid"
+# Your username is whatever follows "https://pinterest.com/" on your profile page
+pinterest = "username"
+reddit = "userid"
+spotify = "username"
+tumblr = "username"
+twitter = "userid"
+steam = "userid"
+```
 
 ### Shortcodes
 

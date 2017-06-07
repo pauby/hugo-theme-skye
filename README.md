@@ -10,6 +10,10 @@ The BluestNight theme can be seen in action with its custom color scheme [here](
 
 You can find more details on certain features by scrolling down past this list
 
+- Disqus commenting (fixed for testing with localhost and can be disabled by content)
+- Big cover image (optional)
+- Custom cover by content (optional)
+- Google Analytics (optional and disabled when running on localhost)
 - [Site header with tagline](#site-headertagline)
 - Responsive design using [CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 - [Configurable color scheme](#custom-colors)
@@ -48,6 +52,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
 [Params]
     tagline = "An example tagline for my Hugo site" # Subtitle of your site
     description = "Here is a description of my site that will appear in search engine results - W00t!" # Description of your site
+    cover = "/images/cover.jpg"
     authorbox = true
     author = "Some Guy" # Name must exist in an entry in /data/members
     post_navigation = false
@@ -57,8 +62,8 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     RSSLink = "http://feeds.feedburner.com/yoursite.xml"
 
     custom_css = ["/css/powershellconsole.css" ]
-	# custom_js_head = [""]		# Javascript URL's to place inside <script src=> tags in the header
-	# custom_js_foot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
+	custom_js_head = [""]		# Javascript URL's to place inside <script src=> tags in the header
+	custom_js_foot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
 
 # Custom background for the site
 [Params.Background]
@@ -94,7 +99,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
 
 ```
 
-See [Configuration](/Configuration.md) for a detailed explanation of each option.
+See [Configuration](/CONFIGURATION.md) for a detailed explanation of each option.
 
 ## Displaying Code On Your Site
 
@@ -111,7 +116,7 @@ PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 ```
 
-If you are happy with the default appearance of the the Pygment Styles then use `PygmentsStyle` variable to your preferred [style](http://pygments.org/docs/styles/). Otherwise remove the variable and include your preferred CSS in the page `<head>`. See [custom_css](#/Configuration.md#custom_css).
+If you are happy with the default appearance of the the Pygment Styles then use `PygmentsStyle` variable to your preferred [style](http://pygments.org/docs/styles/). Otherwise remove the variable and include your preferred CSS in the page `<head>`. See [custom_css](#/CONFIGURATION.md#custom_css).
 
 ``` toml
 PygmentsUseClasses = true
