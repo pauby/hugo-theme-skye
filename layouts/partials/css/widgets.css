@@ -32,6 +32,10 @@
   border: 3px solid {{ .Get "body_text" }};
 }
 
+.member-avatar {
+  flex-shrink: 0;
+}
+
 /* Widgets -- Patreon */
   /* Contain the banner within the sidebar */
 #patreon-banner {
