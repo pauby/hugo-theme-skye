@@ -52,7 +52,12 @@
       ga('create', '{{.}}', 'auto');
       ga('send', 'pageview');
     </script>
-    {{end}} 
+    {{end}}
+
+    {{ range .Site.Params.Appearance.googlefonts }}
+    {{ . | safeHTML  }}
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ (printf "%s" .) safeHTML }}" type="text/css" media="all" />
+    {{ end }}
 
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/foundation/foundation-icons.css">
     {{ if ($.Site.Params.hashover) }}
@@ -66,6 +71,10 @@
       <script src="{{ . | absURL }}"></script>
     {{ end }}
     {{ partial "extra-in-head.html" . }}
+        <style>
+    h1, h2, h3, h4 { font-family: Bitter !important }
+    body { font-family: 'Source Sans Pro', sans-serif }
+    </style>
   </head>
   <body>
     <div id="site-container">
