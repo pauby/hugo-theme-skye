@@ -69,13 +69,13 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 }
 
 #site-title, #site-tagline {
-  text-transform: uppercase;
   font-weight: bold;
   display:inline-block;
   color: {{ .Get "header_text" }};
 }
 
 #site-title {
+  font-family: {{ .Get "header_font" }};
   font-size: 3rem;
   padding-bottom: 0.5rem;
 }
