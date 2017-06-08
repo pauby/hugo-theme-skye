@@ -1,7 +1,6 @@
 /* Widgets */
 
 .widget header, #main-nav {
-  text-transform: uppercase;
   margin: 0.5rem 0;
   border-bottom: 3px solid {{ .Get "accent" }};
 }

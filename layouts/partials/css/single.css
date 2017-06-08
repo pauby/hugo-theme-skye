@@ -12,6 +12,10 @@ main img {
   max-width: 100%;
 }
 
+.thumbnail img {
+  padding-bottom: 1rem;
+}
+
 /* Site main - taxonomy list */
 
 .taxonomy-item {
