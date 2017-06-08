@@ -22,3 +22,7 @@
   color: {{ .Get "header_text" }};
   background-color: {{ .Get "accent" }};
 }
+
+.metadata {
+  color: {{ .Get "accent" }}
+}
