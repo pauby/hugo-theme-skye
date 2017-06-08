@@ -44,8 +44,7 @@ First, a data file under `/data/members/` that has the following information:
 Name = "Luke Skywalker"
 Img = "/path/to/picture/of/lukeskywalker.jpg"
 Position = "Master Jedi"
-Bio = |
-  I'm Luke. My father tried to kill me and then saved me. I'm confused.
+Bio = "I'm Luke. My father tried to kill me and then saved me. I'm confused."
 ```
 
 And then the [author](#author) variable set to a `name` in the data file.
@@ -232,7 +231,7 @@ your username should be entered *without* one. Currently supported are:
 ``` toml
 deviantart = "username"
 # Your Facebook user id is what comes after "https://facebook.com/" on your public profile page
-facebook = "userid" 
+facebook = "userid"
 github = "userid"
 googleplus = "+name-surname"
 instagram = "username"
