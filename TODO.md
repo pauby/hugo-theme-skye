@@ -8,7 +8,11 @@
 
 - [ ] Update / create / amend / assess SEO
 
-This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/BluestNight) project.
+## Widgets
+
+- [ ] Fix authorbox social-icons colour
+
+This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/BluestNight) project. Items will be gradually migrated across to the project list.
 
 ## Widgets
 
