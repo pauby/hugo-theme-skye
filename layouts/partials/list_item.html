@@ -15,7 +15,7 @@
     <div style="float: left; height: 120px; width: 192px; padding: 0 10px 10px 0">
     <figure>
       <a href="{{ .Permalink }}">
-        <img src="{{ .Params.thumbnail | absURL }}" alt="{{ .Title }}" />
+        <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
       </a>
     </figure>
   </div>
