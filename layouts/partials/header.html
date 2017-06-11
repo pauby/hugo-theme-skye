@@ -58,11 +58,11 @@
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ (printf "%s" .) safeHTML }}" type="text/css" media="all" />
     {{ end }}
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/foundation/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/foundation/foundation-icons.css">
     {{ if ($.Site.Params.hashover) }}
-      <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}hashover/comments.css">
+      <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/hashover/comments.css">
     {{ end }}
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/styles.css">
     {{ range .Site.Params.custom_css }}
       <link rel="stylesheet" type="text/css" href="{{ . | absURL }}" />
     {{ end }}
