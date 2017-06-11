@@ -71,6 +71,7 @@ table tbody tr {
   background-color: {{ .Get "main_bg" }};
 }
 
-table tbody tr:nth-child(even) {
+/*table tbody tr:nth-child(even) {
   background-color: {{ .Get "alt_bg" }};
-}
+  color: {{ .Get "alt_body_text" }};
+}*/
