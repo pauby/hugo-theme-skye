@@ -6,7 +6,8 @@
 
 ## Layouts
 
-- [ ] Update / create / amend / assess SEO
+- [ ] Update / create / amend / assess SEO;
+- [ ] Set [taxonomies]categories = "" and have the templates still work;
 
 ## Widgets
 
