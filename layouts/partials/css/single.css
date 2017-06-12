@@ -75,3 +75,9 @@ table tbody tr {
   background-color: {{ .Get "alt_bg" }};
   color: {{ .Get "alt_body_text" }};
 }*/
+
+#post-content .thumbnail img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
