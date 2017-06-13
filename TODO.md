@@ -8,6 +8,7 @@
 
 - [ ] Update / create / amend / assess SEO;
 - [ ] Set [taxonomies]categories = "" and have the templates still work;
+- [ ] if googleFonts (in config file) contains '+' then it is renders using the '%2b' html code. Raised [Hugo issue](https://github.com/spf13/hugo/issues/3588) for this and need to update this task accordingly.
 
 ## Widgets
 
