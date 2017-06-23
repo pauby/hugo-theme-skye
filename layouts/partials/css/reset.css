@@ -2,7 +2,9 @@
 * {
   box-sizing: border-box;
 }
-body { font-family: "Clear Sans", sans-serif; }
+body {
+  font-family: {{ .Get "text_font" }}, sans-serif;
+}
 p { margin-bottom: 1rem; }
 p, li { line-height: 1.5; }
 ul {
@@ -29,6 +31,7 @@ h6 { font-size: 1.2rem; }
 h1,h2,h3,h4,h5,h6 {
   margin: 1rem 0;
   line-height: 1.1;
+  font-family: {{ .Get "header_font" }}, sans-serif;
 }
 
 table {
@@ -38,7 +41,7 @@ table {
 code { padding: 0.2rem; display: inline-block;}
 code, pre {
   max-width: 100%;
-  font-family: 'Courier New', monospace !important;
+  font-family: {{ .Get "code_font" }}, monospace !important;
 }
 th, td {
   padding: 0.6rem;

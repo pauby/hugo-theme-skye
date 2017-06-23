@@ -173,6 +173,82 @@ This is your [Font Awesome CDN Embed Code](http://fontawesome.io/get-started/). 
 
 See [fontawesome](#fontawesome) for more information.
 
+## Configuration - [Params.Appearance]
+
+This section is for configuration of the sites appearance.
+
+### googlefonts
+
+This controls the [Google Fonts](https://fonts.google.com/) that are loaded with your site.
+
+``` toml
+googlefonts = [ "Bitter", "Source+Sans+Pro" ]
+```
+
+This will load the Bitter and Source Sans Pro fonts. Note that **any spaces in your font name must be replaced by +** or the font may not be loaded.
+
+See the `header.html` for the code.
+
+###	header_font
+
+The font used for the `h1` to `h6` headers on your site.
+
+``` toml
+header_font = "Bitter, Source Sans Pro"
+```
+
+Produces this CSS code:
+
+``` css
+h1,h2,h3,h4,h5,h6 {
+  font-family: Bitter, Source Sans Pro, sans-serif;
+}
+```
+
+This will use the Bitter, then the Source Sans Pro font for the `h` headers. Note that whatever you put here will have sans-serif added as the final fallback font should none of the others be available.
+
+See the `index.css` for config variables and `reset.css` for the CSS.
+
+###	text_font
+
+The font used for the normal text on your site. This font is set on the CSS for the `body {}`.
+
+``` toml
+text_font = "Bitter, Source Sans Pro"
+```
+
+Produces this CSS code:
+
+``` css
+body {
+  font-family: Bitter, Source Sans Pro, sans-serif;
+}
+```
+
+This will use the Bitter, then the Source Sans Pro font for text. Note that whatever you put here will have sans-serif added as the final fallback font should none of the others be available.
+
+See the `index.css` for config variables and `reset.css` for the CSS.
+
+### code_font
+
+The font used for the code text on your site within `<pre>` or `<code>` blocks.
+
+``` toml
+code_font = "Courier New"
+```
+
+Produces this CSS code:
+
+``` css
+code, pre {
+  font-family: Courier New, monospace !important;
+}
+```
+
+This will use the Courier New font for code text. Note that whatever you put here will have `monospace` added as the final fallback font should none of the others be available.
+
+See the `index.css` for config variables and `reset.css` for the CSS.
+
 ## Configuration - [Params.Background]
 
 This section allows your site to have a background image. If you do not tile the image, it gets anchored in the top-left corner of the window
