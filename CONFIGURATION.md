@@ -148,6 +148,31 @@ Will result in this code within just before the `</body>` tag on the page:
 </body>
 ```
 
+### fontawesome
+
+Controls whether Font Awesome CSS is included in the page <head>.
+
+If this is true and [fontawesome_cdn_embedcode](#fontawesome_cdn_embedcode) is empty then as per the [Font Awesome Getting Started instructions](http://fontawesome.io/get-started/), the `css/font-awesome.min.css` is included from the head (make sure this file is placed in the correct location).
+
+If this is true and [fontawesome_cdn_embedcode][#fontawesome_cdn_embedcode] is not an empty value, then as per the [Font Awesome Getting Started instructions](http://fontawesome.io/get-started/), the `<script src="https://use.fontawesome.com/<YOUR CDN EMBED CODE>.js"></script>` is included in the `<head>` section.
+
+``` toml
+fontawesome = true
+fontawesome_cdn_embedcode = "1234567890"
+```
+
+Will result in the following HTML being aded to the `<head>`:
+
+``` html
+<script src="https://use.fontawesome.com/1234567890.js"></script>
+```
+
+### fontawesome_cdn_embedcode
+
+This is your [Font Awesome CDN Embed Code](http://fontawesome.io/get-started/). If you prefer to use the local CSS on your site for this then remove this or leave the value blank.
+
+See [fontawesome](#fontawesome) for more information.
+
 ## Configuration - [Params.Background]
 
 This section allows your site to have a background image. If you do not tile the image, it gets anchored in the top-left corner of the window

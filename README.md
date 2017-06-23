@@ -14,6 +14,7 @@ You can find more details on certain features by scrolling down past this list
 - Big cover image (optional)
 - Custom cover by content (optional)
 - Google Analytics (optional and disabled when running on localhost)
+- Font Awesome support (local CSS and using embed code)
 - [Site header with tagline](#site-headertagline)
 - Responsive design using [CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 - [Configurable color scheme](#custom-colors)
@@ -64,6 +65,9 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     custom_css = ["/css/powershellconsole.css" ]
 	custom_js_head = [""]		# Javascript URL's to place inside <script src=> tags in the header
 	custom_js_foot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
+
+    fontawesome = true
+    fontawesome_cdn_embedcode = "1234567890"
 
 # Custom background for the site
 [Params.Background]
