@@ -1,6 +1,6 @@
 # Hugo Theme - Skye
 
-## Configuration - [Params]
+## Site Wide Configuration - [Params]
 
 ### tagline
 
@@ -152,96 +152,246 @@ Will result in this code within just before the `</body>` tag on the page:
 
 This section allows your site to have a background image. If you do not tile the image, it gets anchored in the top-left corner of the window
 
-```toml
-[Params.background]
-    # Path or link to the image
-    src = "/images/background.jpg"
-    # Shrink image to fit the full width in the window?
-    fit_width = true
-    # Tile the image?
-    tile = false
+### src
+
+Url of the image displayed as the site background.
+
+``` toml
+src = "/images/background.jpg"
 ```
 
+### fit_width
+
+Shrink the image to fit the width of the window.
+
+``` toml
+fit_width = true
+```
+
+### tile
+
+Tile the image across the window.
+
+``` toml
+tile = false
+```
 ## Configuration - [Params.Color]
 
-Change any or all of the page colors:
+Change any or all of the page colors.
+
+### page_background_color
+
+Fairly self-explanatory - color of the *page* background. This is different from the window background color as the page sits within the window.
 
 ```toml
-[Params.color]
-    # Background of page behind site container, where background image goes
     page_background_color = "#000000"
-    # Background of site container
-    main_background_color = "#050505"
-    # Alternate background of site container, used on inactive buttons,
-    # alternatings table rows, and <code> and <pre> elements (code fields)
-    alt_background_color = "#252525"
-    # The text color to correspond with main_background_color
-    body_text = "#e2e2e2"
-    # The text color to correspond with alt_background_color
+```
+
+### main_background_color
+
+Background color of the window (site container), where the background image sits. Note that the *page* sits inside this window, hence why you can have two different colors.
+
+``` toml
+main_background_color = "#050505"
+```
+
+### alt_background_color
+
+Alternate background of site container, used on inactive buttons, alternatings table rows, and <code> and <pre> elements (code fields).
+
+``` toml
+alt_background_color = "#252525"
+```
+
+### body
+_text
+
+The text color to correspond with main_background_color.
+
+``` toml
+body_text = "#e2e2e2"
+```
+
+### alt_body_text
+
+The text color to correspond with alt_background_color.
+
+``` toml
     alt_body_text = "#e2e2e2"
-    # Accent color, used for active buttons, links, and the site header
-    accent_color = "#2c8cef"
-    # A text color to correspond with using accent_color as a background color
+```
+
+### accent_color
+
+Accent color, used for active buttons and links.
+
+``` toml
+accent_color = "#2c8cef"
+```
+
+### header_text
+
+Color of the site header text.
+
+``` toml
     header_text = "#e2e2e2"
 ```
 
-This requires also adding `CSS` as an output type for the home page, e.g.:
+### Sidebar widgets [Params.widgets]
 
-```toml
-[outputs]
-    home = ["HTML", "CSS"]
+### recent_articles
+
+Show the ten most recent posts under /post/.
+
+``` toml
+recent_articles = true
 ```
 
-### Sidebar widgets
+### categories
 
-```toml
-[Params.widgets]
-    # Show the ten most recent posts under /post/
-    recent_articles = true
-    # Show the top 5 categories in use on your site
-    categories = true
-    # Show the tags used on your site, ordered by most common
-    tags = true
-    # Include a parenthetical count of how often a tag has been used
-    tags_counter = false
-    # Show a Patreon banner in the sidebar linking to the URL below
-    # Note: Since this is originally a dark theme, the banner used is white.
-    # Eventually I will get around to making it configurable
-    patreon = "https://patreon.com/shadow53"
+Show the top 5 categories in use on your site
+
+``` toml
+categories = true
 ```
 
+### tags
 
+Show the tags used on your site, ordered by most common
 
-### Custom Section Landing Pages
+```toml
+tags = true
+```
 
-Rather than have Hugo generate a page of nothing but the content under a section,
-maybe you'd like to introduce the content with a paragraph or two first. If you
-place a `_index.md` file with the desired content in the root of the section folder,
-BluestNight will place that text before the content list.
+### tags_counter
 
-Bonus! If you want to hide the list and show only your custom content, just add
-a line setting `hide_list` to `true` in the front matter of `_index.md`.
+Include a parenthetical count of how often a tag has been used.
 
-### Social Icons
+``` toml
+tags_counter = false
+```
 
-BluestNight supports linking to a number of popular social sites from icons in
-the site footer. If the service normally uses usernames prefixed with an "@",
-your username should be entered *without* one. Currently supported are:
+### patreon
+
+Show a Patreon banner in the sidebar linking to the URL specified here.
+Note: Since this is originally a dark theme, the banner used is white. Eventually I will get around to making it configurable
+
+``` toml
+patreon = "https://patreon.com/shadow53"
+```
+
+### Social Icons - [Params.Social]
+
+BluestNight supports linking to a number of popular social sites from icons in the site footer. If the service normally uses usernames prefixed with an "@", your username should be entered *without* one.
+
+``` toml
+[Params.Social]
+	deviantart = "username"
+	facebook = "userid"
+	github = "pauby"
+	googleplus = "+Joe-Smith"
+	instagram = "username"
+	linkedin = "paulbroadwith"
+	pinterest = "username"
+	reddit = "pauby"
+	spotify = "username"
+	tumblr = "username"
+	twitter = "pauby"
+	steam = "userid"
+```
+
+### deviantart
+
+Your deviantart username.
 
 ``` toml
 deviantart = "username"
-# Your Facebook user id is what comes after "https://facebook.com/" on your public profile page
+```
+
+### facebook
+
+Your Facebook user id is what comes after "https://facebook.com/" on your public profile page.
+
+``` toml
 facebook = "userid"
-github = "userid"
+```
+
+### github
+
+Your Github user name.
+
+``` toml
+github = "username"
+```
+
+### googleplus
+
+Your GooglePlus username.
+
+``` toml
 googleplus = "+name-surname"
+```
+
+### instagram
+
+Your instagram username.
+
+``` toml
 instagram = "username"
+```
+
+### linkedin
+
+Your LinkedIn name. This is the part that appears at the end of your profile page URL and is generally <FIRSTNAMELASTNAME> in lowercase.
+
+``` toml
 linkedin = "userid"
-# Your username is whatever follows "https://pinterest.com/" on your profile page
+```
+
+### pinterest
+
+Your username is whatever follows "https://pinterest.com/" on your profile page
+
+``` toml
 pinterest = "username"
-reddit = "userid"
-spotify = "username"
-tumblr = "username"
-twitter = "userid"
+```
+
+### reddit
+
+Your Reddit username.
+
+``` toml
+reddit = "pauby"
+```
+
+### spotify
+
+Your Spotify username.
+
+``` toml
+spotify = "pauby"
+```
+
+### tumblr
+
+Your tumblr username.
+
+``` toml
+tumblr = "pauby"
+```
+
+### twitter
+
+Your Twitter username (without the @).
+
+``` toml
+twitter = "pauby"
+```
+
+### steam
+
+Your Steam userid.
+
+```
 steam = "userid"
 ```
 
@@ -249,11 +399,7 @@ steam = "userid"
 
 #### Member Boxes
 
-The memberbox is equivalent to the authorbox, except that memberboxes can be
-displayed anywhere in a piece of content using the `{{< member "Member Name" >}}`
-shortcode. Replace `Member Name` with the name of the member as found in the
-`Name` attribute of the data file in `/data/members/`. See [Authorbox](#authorbox)
-for more on the data file.
+The memberbox is equivalent to the authorbox, except that memberboxes can be displayed anywhere in a piece of content using the `{{< member "Member Name" >}}` shortcode. Replace `Member Name` with the name of the member as found in the `Name` attribute of the data file in `/data/members/`. See [Authorbox](#authorbox) for more on the data file.
 
 ##### Example:
 
@@ -285,4 +431,13 @@ The theme comes with a handful of 100% free handwriting fonts from [Font Squirre
 {{% handwriting "calligraffiti" %}}
 This is some text that will render using the "calligraffiti" font.
 {{% /handwriting %}}
+```
+
+### Output - [outputs]
+
+This requires also adding `CSS` as an output type for the home page.
+
+```toml
+[outputs]
+    home = ["HTML", "CSS"]
 ```
