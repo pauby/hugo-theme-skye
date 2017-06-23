@@ -57,11 +57,11 @@
     {{ range .Site.Params.Appearance.googlefonts }}
       <link rel="stylesheet" {{ printf "href=\"//fonts.googleapis.com/css?family=%s\"" . | safeHTMLAttr }} type="text/css" media="all" />
     {{ end }}
-    <link rel="stylesheet" type="text/css" href={{ "css/foundation/foundation-icons.css" | relURL }}>
+    <link rel="stylesheet" type="text/css" href={{ "css/foundation/foundation-icons.css" | absURL }}>
     {{ if ($.Site.Params.hashover) }}
-      <link rel="stylesheet" type="text/css" href={{ "hashover/comments.css" | relURL }}>
+      <link rel="stylesheet" type="text/css" href={{ "hashover/comments.css" | absURL }}>
     {{ end }}
-    <link rel="stylesheet" type="text/css" href={{ "/styles.css" | relURL }}>
+    <link rel="stylesheet" type="text/css" href={{ "styles.css" | absURL }}>
     {{ range .Site.Params.custom_css }}
       <link rel="stylesheet" type="text/css" href="{{ . | absURL }}" />
     {{ end }}
