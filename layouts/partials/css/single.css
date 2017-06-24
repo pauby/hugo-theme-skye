@@ -12,6 +12,14 @@ main img {
   max-width: 100%;
 }
 
+.thumbnail img {
+  padding-bottom: 1rem;
+}
+
+li img {
+  padding: 1rem 0 1rem 0;
+}
+
 /* Site main - taxonomy list */
 
 .taxonomy-item {
@@ -63,6 +71,13 @@ table tbody tr {
   background-color: {{ .Get "main_bg" }};
 }
 
-table tbody tr:nth-child(even) {
+/*table tbody tr:nth-child(even) {
   background-color: {{ .Get "alt_bg" }};
+  color: {{ .Get "alt_body_text" }};
+}*/
+
+#post-content .thumbnail img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }

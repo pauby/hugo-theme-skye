@@ -1,32 +1,80 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{.Site.LanguageCode}}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ .Title }}</title>
-    {{ $.Scratch.Set "desc" "" }}
-    {{ with $.Site.Params.description }}{{ $.Scratch.Set "desc" . }}{{ end }}
-    {{ with .Summary }}{{ $.Scratch.Set "desc" . }}{{ end }}
-    {{ with $.Params.description }}{{ $.Scratch.Set "desc" . }}{{ end }}
-    {{ if (not (eq ($.Scratch.Get "desc") "")) }}
-    <meta name="description" content="{{ $.Scratch.Get "desc" }}">
+
+    {{ partial "twitter_card.html" . }}
+    {{ partial "opengraph.html" . }}
+
+    {{ if .IsPage }}
+      <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+      {{ range .Params.tags }}
+        <meta property="article:tag" content="{{ . }}" />
+      {{ end }}
     {{ end }}
+
+    <title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+    {{ if .IsPage }}
+      <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" />
+    {{ else }}
+      <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" />
+    {{ end }}
+    {{ if .Site.Params.RSSLink}}
+      <link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{else}}
+      {{ if ne .URL "/" }}
+        <link href="{{ "index.xml" | relURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      {{ end }}
+      {{if .IsNode}}
+        <link href="{{.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
+      {{end}}
+    {{end}}
     {{ .Hugo.Generator }}
     {{ if .RSSLink }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Feed" href="{{ .RSSLink }}">{{ end }}
     {{ if .Params.tags }}
       <meta name="keywords" content="{{ delimit .Params.tags "," }}">
     {{ end }}
+    <link rel="shortcut icon" href="{{ "images/favicon.ico" | relURL}}">
     <link rel="canonical" href="{{ .URL | absURL }}">
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/foundation/foundation-icons.css">
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}hashover/comments.css">
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}styles.css">
-{{ range .Site.Params.custom_local_css }}
-    <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}{{ . }}" />
-{{ end }}
-{{ range .Site.Params.custom_local_js_header }}
-    <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
-{{ end }}
-{{ partial "extra-in-head.html" }}
+
+    {{with .Site.Params.googleAnalyticsUserID }}
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        if (window.location.hostname == "localhost")
+          return;
+
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', '{{.}}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {{end}}
+
+    {{ range .Site.Params.Appearance.googlefonts }}
+      <link rel="stylesheet" {{ printf "href=\"//fonts.googleapis.com/css?family=%s\"" . | safeHTMLAttr }} type="text/css" media="all" />
+    {{ end }}
+    {{ if ($.Site.Params.fontawesome) }}
+      {{ if ($.Site.Params.fontawesome_cdn_embedcode) }}
+        <script src="https://use.fontawesome.com/{{$.Site.Params.fontawesome_cdn_embedcode}}.js"></script>
+      {{ else }}
+        <link rel="stylesheet" href={{ "css/font-awesome.min.css" | absURL }}>
+      {{ end }}
+    {{ end }}
+    {{ if ($.Site.Params.hashover) }}
+      <link rel="stylesheet" type="text/css" href={{ "hashover/comments.css" | absURL }}>
+    {{ end }}
+    <link rel="stylesheet" type="text/css" href={{ "styles.css" | absURL }}>
+    {{ range .Site.Params.custom_css }}
+      <link rel="stylesheet" type="text/css" href="{{ . | absURL }}" />
+    {{ end }}
+    {{ range .Site.Params.custom_js_head }}
+      <script src="{{ . | absURL }}"></script>
+    {{ end }}
+    {{ partial "extra-in-head.html" . }}
   </head>
   <body>
     <div id="site-container">

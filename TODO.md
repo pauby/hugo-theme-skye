@@ -1,3 +1,26 @@
+# Hugo Theme - Skye
+
+## Documentation
+
+- [ ] Update docs
+
+## Layouts
+
+- [ ] Update / create / amend / assess SEO;
+- [ ] Set [taxonomies]categories = "" and have the templates still work;
+- [X] if googleFonts (in config file) contains '+' then it is renders using the '%2b' html code. Raised [Hugo issue](https://github.com/spf13/hugo/issues/3588) for this and need to update this task accordingly.
+
+## Widgets
+
+- [ ] Fix authorbox social-icons colour
+- [ ] Fix patreon banner to allow for different colours (black on white background / white on black)
+
+## Misc
+
+- [ ] Get the site working HTTP or HTTPS
+
+This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/BluestNight) project. Items will be gradually migrated across to the project list.
+
 ## Widgets
 
 - [ ] Add a blogroll / favorite links menu widget in the sidebar - .fi-link icon?

@@ -69,13 +69,13 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 }
 
 #site-title, #site-tagline {
-  text-transform: uppercase;
   font-weight: bold;
   display:inline-block;
   color: {{ .Get "header_text" }};
 }
 
 #site-title {
+  font-family: {{ .Get "header_font" }};
   font-size: 3rem;
   padding-bottom: 0.5rem;
 }
@@ -88,7 +88,7 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 
 code {
   background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "alt_body_text" }};
   border-color: {{ .Get "alt_bg" }};
   overflow-wrap: break-word;
 }

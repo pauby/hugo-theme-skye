@@ -8,15 +8,15 @@
           {{ if not .Date.IsZero }}
           <span class="row-item">
     				<i class="fi-clock"></i>
-    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "January 02, 2006"}}</time>
+    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}</time>
           </span>
   				{{ end }}
-  				{{ if .Params.categories }}
+<!--  				{{ if .Params.categories }}
   				<span class="row-item">
   					<i class="fi-folder"></i>
   					{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "categories/" | absLangURL }}{{ . | urlize | lower }}" rel="category">{{ . }}</a>{{ end }}
           </span>
-  				{{ end }}
+  				{{ end }}-->
           {{ if not .Params.hide_readingtime }}
           <span class="row-item">Estimated reading time: ~{{ .ReadingTime }} minutes</span>
           {{ end }}
@@ -26,7 +26,7 @@
       <div id="post-content">
         {{ if .Params.thumbnail }}
   			<figure class="thumbnail">
-  				<img src="{{ .Params.thumbnail | absURL }}" alt="{{ .Title }}">
+  				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
   			</figure>
   			{{ end }}
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}

@@ -10,6 +10,15 @@
   font-weight: bold;
 }
 
+.post-list-thumbnail {
+  float: left;
+}
+
+.post-list-thumbnail img {
+  height: 120px;
+  padding: 0 10px 10px 0;
+}
+
 /* Site main - pagination */
 
 .pagination .pagination-previous a,
@@ -21,4 +30,8 @@
 .pagination .pagination-next a:hover {
   color: {{ .Get "header_text" }};
   background-color: {{ .Get "accent" }};
+}
+
+.metadata {
+  color: {{ .Get "accent" }}
 }

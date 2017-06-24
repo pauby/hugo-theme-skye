@@ -7,7 +7,7 @@
     <script defer type="text/javascript" src="{{ .Site.BaseURL }}js/hashoverride.js"></script>
     <noscript>You must have JavaScript enabled to use the comments.</noscript>
   {{ else }}
-    {{ template "_internal/disqus.html" . }}
+    {{ partial "localhost-disqus.html" . }}
   {{ end }}
 </div>
 {{ end }}

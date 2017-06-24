@@ -14,6 +14,9 @@
 {{ with $.Site.Params.color.alt_body_text }}        {{ $.Scratch.Set "alt_body_text" . }}  {{ end }}
 {{ with $.Site.Params.color.accent_color }}         {{ $.Scratch.Set "accent" . }}         {{ end }}
 {{ with $.Site.Params.color.header_text }}          {{ $.Scratch.Set "header_text" . }}    {{ end }}
+{{ with $.Site.Params.Appearance.header_font }}     {{ $.Scratch.Set "header_font" . }}    {{ end }}
+{{ with $.Site.Params.Appearance.text_font }}       {{ $.Scratch.Set "text_font" . }}      {{ end }}
+{{ with $.Site.Params.Appearance.code_font }}       {{ $.Scratch.Set "code_font" . }}      {{ end }}
 
 {{ with $.Site.Params.background.src }}{{ $.Scratch.Set "background_src" . }}{{ end }}
 {{ if ($.Site.Params.background.tile) }}{{ $.Scratch.Set "background_tile" "repeat" }}{{ else }}{{ $.Scratch.Set "background_tile" "no-repeat" }}{{ end }}

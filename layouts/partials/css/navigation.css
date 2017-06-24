@@ -2,6 +2,7 @@
 
 #main-nav {
   background-color: {{ .Get "alt_bg" }};
+  font-family: {{ .Get "header_font" }}, sans-serif;
 }
 
 #main-nav .button {
