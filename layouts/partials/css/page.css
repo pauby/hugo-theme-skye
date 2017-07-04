@@ -165,3 +165,8 @@ footer p {
 #social-icons a:hover {
   color: {{ .Get "accent" }};
 }
+
+#attribution {
+  font-size: 0.8rem;
+  font-style: italic;
+}

@@ -31,6 +31,7 @@
   			{{ end }}
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
   			{{ .Content }}
+        {{ partial "attribution.html" . }}
   		</div>
       {{ partial "post_tags.html" . }}
     </article>
