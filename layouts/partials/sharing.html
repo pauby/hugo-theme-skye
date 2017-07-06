@@ -1,50 +1,55 @@
 {{ if (not .Params.disable_sharing) }}
-    <div class="share">
-        Share:
-        {{ if .Site.Params.Sharing.email }}
-            <a href="mailto:?subject={{ .Title }}&amp;body={{ .Params.Description }} : {{ .Permalink }}">                
-                <i class="fa fa-envelope fa-2x fa-fw" aria-hidden="true"></i>
-            </a>
-        {{ end }}
-        {{ if .Site.Params.Sharing.twitter }}
-            <a href="https://twitter.com/share?text={{ .Title }}&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=350');return false;">
-                <i class="fa fa-twitter-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a>
-        {{end}}
-        {{ if .Site.Params.Sharing.facebook }}
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <i class="fa fa-facebook-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a> 
-        {{ end }} 
-        {{ if .Site.Params.Sharing.googleplus }}
-            <a href="https://plus.google.com/share?url={{ .Permalink }}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                <i class="fa fa-google-plus-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a> 
-        {{ end }}
-        {{ if .Site.Params.Sharing.linkedin }}
-            <a href="https://www.linkedin.com/shareArticle?mini=true&title={{ .Title }}&url={{ .Permalink }}&summary={{ .Description }}" onclick="window.open(this.href, 'linkedin-share', 'width=750,height=550');return false;">
-                <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a> 
-        {{ end }}
-        {{ if .Site.Params.Sharing.pinterest }}
-            <a href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}{{ if .Params.pinterestmedia }}&amp;media={{ .Params.pinterestmedia | relURL }}{{ end }}&amp;description={{ .Title | safeHTML}}" onclick="window.open(this.href, 'pinterest-share','width=750,height=550');return false;">
-                <i class="fa fa-pinterest-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a>
-        {{ end }}
-        {{ if .Site.Params.Sharing.reddit }}
-            <a href="http://www.reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}" onclick="window.open(this.href, 'reddit-share','width=750,height=800');return false;">
-                <i class="fa fa-reddit-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a>
-        {{ end }}
-        {{ if .Site.Params.Sharing.pocket }}
-            <a href="https://getpocket.com/save?url={{ .Permalink }}" onclick="window.open(this.href, 'pocket-share','width=550,height=600');return false;">
-                <i class="fa fa-get-pocket fa-2x fa-fw" aria-hidden="true"></i>
-            </a>
-        {{ end }}
-        {{ if .Site.Params.Sharing.tumblr }}
-            <a href="http://www.tumblr.com/share?v=3&amp;u={{ .Permalink }}&amp;t={{ .Title }}" onclick="window.open(this.href, 'tumblr-share','width=550,height=600');return false;">
-                <i class="fa fa-tumblr-square fa-2x fa-fw" aria-hidden="true"></i>
-            </a>
+    <div class="sharing">
+        {{ range (split (delimit .Site.Params.Social.sharing "," | lower) ",") }}
+             {{ if eq . "email" }}
+                <a href="mailto:?subject=Wanted to share this - {{ $.Title }}&amp;body={{ $.Params.Description }} - {{ $.Permalink }}" class="share-btn email">                
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a> 
+            {{ end }}
+            {{ if eq . "twitter" }}
+                {{ if $.Site.Params.Social.twitter }} 
+                    <a href="https://twitter.com/share?url={{ $.Permalink }}&amp;text={{ $.Title }}&amp;via={{ $.Site.Params.Social.twitter }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=350');return false;" class="share-btn twitter">
+                {{ else }}
+                    <a href="https://twitter.com/share?url={{ $.Permalink }}&amp;text={{ $.Title }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=350');return false;" class="share-btn twitter">
+                {{ end }}    
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a> 
+            {{ end }}
+            {{ if eq . "facebook" }}
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ $.Permalink }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="share-btn facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a> 
+            {{ end }} 
+            {{ if eq . "googleplus" }}
+                <a href="https://plus.google.com/share?url={{ $.Permalink }}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" class="share-btn google-plus">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a> 
+            {{ end }}
+            {{ if eq . "linkedin" }}
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;title={{ $.Title }}&amp;url={{ $.Permalink }}&amp;summary={{ $.Params.Description }}" onclick="window.open(this.href, 'linkedin-share', 'width=750,height=550');return false;" class="share-btn linkedin">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a> 
+            {{ end }}
+            {{ if eq . "pinterest" }}
+                <a href="http://pinterest.com/pin/create/button/?url={{ $.Permalink }}&amp;description={{ $.Title | safeHTML}}" onclick="window.open(this.href, 'pinterest-share','width=750,height=550');return false;" class="share-btn pinterest">
+                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+            {{ end }}
+            {{ if eq . "reddit" }}
+                <a href="http://www.reddit.com/submit?url={{ $.Permalink }}&amp;title={{ $.Title }}" onclick="window.open(this.href, 'reddit-share','width=750,height=800');return false;" class="share-btn reddit">
+                    <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+                </a>
+            {{ end }}
+            {{ if eq . "pocket" }}
+                <a href="https://getpocket.com/save?url={{ $.Permalink }}" onclick="window.open(this.href, 'pocket-share','width=550,height=600');return false;" class="share-btn pocket">
+                    <i class="fa fa-get-pocket" aria-hidden="true"></i>
+                </a>
+            {{ end }}
+            {{ if eq . "tumblr" }}
+                <a href="http://www.tumblr.com/share?v=3&amp;u={{ $.Permalink }}&amp;t={{ $.Title }}" onclick="window.open(this.href, 'tumblr-share','width=550,height=600');return false;" class="share-btn tumblr">
+                    <i class="fa fa-tumblr" aria-hidden="true"></i>
+                </a>
+            {{ end }}
         {{ end }}
     </div>
 {{ end }}

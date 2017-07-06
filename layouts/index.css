@@ -33,3 +33,4 @@
 {{ partial "css/widgets.css" $.Scratch }}
 {{ if ($.Site.Params.hashover) }}{{ partial "css/hashover.css" $.Scratch }}{{ end }}
 {{ partial "css/print.css" $.Scratch }}
+{{ partial "css/sharing.css" $.Scratch }}

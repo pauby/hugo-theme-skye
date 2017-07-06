@@ -1,0 +1,38 @@
+/* Share button CSS courtesy of https://github.com/gschier/html-share-buttons */
+
+.share-btn {
+    display: inline-block;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em;
+    width: 4em;
+    opacity: 0.9;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+    outline: none;
+    text-align: center;
+}
+
+.share-btn:hover,
+.share-btn:focus {
+    color: #000000;
+}
+
+.share-btn:active {
+    position: relative;
+    top: 2px;
+    box-shadow: none;
+    color: #e2e2e2;
+    outline: none;
+}
+
+.share-btn.twitter { background: #55ACEE; }
+.share-btn.google-plus { background: #DD4B39; }
+.share-btn.facebook { background: #3B5998; }
+.share-btn.stumbleupon { background: #EB4823; }
+.share-btn.reddit { background: #ff5700; }
+.share-btn.linkedin    { background: #4875B4; }
+.share-btn.email { background: #444444; }
+.share-btn.pinterest { background: #BD081C; }
+.share-btn.reddit { background: #FF4500; }
+.share-btn.pocket { background: #EF3E56; }
+.share-btn.tumblr { background: #44546A; }
