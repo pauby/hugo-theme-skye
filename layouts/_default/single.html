@@ -27,6 +27,9 @@
         {{ if .Params.thumbnail }}
   			<figure class="thumbnail">
   				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
+          {{ if .Params.thumbnail_caption }}
+            <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
+          {{ end }}
   			</figure>
   			{{ end }}
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}

@@ -81,3 +81,9 @@ table tbody tr {
   margin-left: auto;
   margin-right: auto
 }
+
+.thumbnail figcaption {
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-bottom: 1rem; 
+}
