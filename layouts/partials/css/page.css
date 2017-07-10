@@ -87,9 +87,8 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 }
 
 code {
-  background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "alt_body_text" }};
-  border-color: {{ .Get "alt_bg" }};
+  color: {{ .Get "body_text" }};
+  font-weight: bold;
   overflow-wrap: break-word;
 }
 
