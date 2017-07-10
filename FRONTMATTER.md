@@ -10,6 +10,8 @@ title = "My lovely post"
 description = "A description that is shown as a summary on a list page."
 date = "2017-07-04T18:44:41+01:00"
 
+sharing_tweet = "Don't you just love #Hugo?" 
+
 disable_comments = false
 draft = false
 hide_authorbox = false
@@ -46,9 +48,17 @@ This is the [standard Hugo front matter][hugo-front-matter-docs] date for the po
 date = "2017-09-11T17:23:09+00:00"
 ```
 
+### sharing_tweet
+
+This is what will be used in the twitter:description of your [Twitter card][twitter-card-summary] and will be used if your post is shared using the sharing button. If this field is not present then the [description][#description] will be used instead.
+
+``` toml
+sharing_tweet = "Don't you just love #Hugo?"
+```
+
 ### disable_comments
 
-If true, this disables the showing of comments on the page or even the comment modules (Disques, Hashover etc.).
+If true, this disables the showing of comments on the page or even the comment modules (Disqus, Hashover etc.).
 
 ``` toml
 disable_comments = true
@@ -110,3 +120,4 @@ categories = [ "horses", "loveliness" ]
 [hugo-cli-docs]: https://gohugo.io/overview/usage/ "Using Hugo"
 [hugo-front-matter-docs]: https://gohugo.io/content/front-matter/ "Hugo Front Matter"
 [site-config-authorbox]: CONFIGURATION.md#authorbox
+[twitter-card-summary]: https://dev.twitter.com/cards/types/summary "Twitter Developer Documentation - Summary card"
