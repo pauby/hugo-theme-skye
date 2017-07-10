@@ -82,6 +82,14 @@ The URL for your site RSS feed.
 RSSLink = "http://feeds.specificfeeds.com/pauby"
 ```
 
+### rss_disable_summary
+
+The theme comes with it's own RSS template which is a slightly modified version of [Hugo's embedded RSS template](https://gohugo.io/templates/rss/#the-embedded-rss-xml). The modification allows the page description, as specified in the [front matter](FRONTMATTER.md#description), to be used instead of the page summary. 
+
+``` toml
+rss_disable_summary = true
+```
+
 ### GoogleAnalyticsUserID
 
 Enter your Google Analytics User ID here to allow site stats to be collected. If this variable is not present or you are running on localhost not analytics will be collected.
