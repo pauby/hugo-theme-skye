@@ -61,7 +61,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     # and cannot be hosted on a different domain
     hashover = false
     RSSLink = "http://feeds.feedburner.com/yoursite.xml"
-    [rss_disable_summary](CONFIGURATION.md#rss_disable_summary) = true
+    rss_disable_summary = true
 
     custom_css = ["/css/powershellconsole.css" ]
 	custom_js_head = [""]	# Javascript URL's to place inside <script src=> tags in the header
