@@ -1,21 +1,28 @@
-{{ if .IsPage }} 
-    {{ with .Params.image }}
-        <!-- Twitter summary card with large image must be at least 280x150px -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="{{ .  | relURL }}" /> 
+{{ if not .Params.disable_sharing }}
+    {{ if .IsPage }} 
+        {{ with .Params.thumbnail }}
+            <!-- Twitter summary card with large image must be at least 280x150px -->
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content="{{ .  | absURL }}" /> 
+        {{ else }}
+            <meta name="twitter:card" content="summary" />
+        {{ end }}
+        {{ with .Params.sharing_tweet }}
+            <meta name="twitter:description" content="{{ . }}" />
+        {{ else }}
+            <meta name="twitter:description" content="{{ .Description }}" /> 
+        {{ end }}
     {{ else }}
-        <meta name="twitter:card" content="summary" /> 
-    {{ end }} 
-{{ else }}
-    <meta name="twitter:card" content="summary" />
-    {{ with .Params.cover }}
-        <meta name="twitter:image" content="{{ . | relURL }}" /> 
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+        {{ with .Params.thumbnail }}
+            <meta name="twitter:image" content="{{ . | absURL }}" />
+        {{ end }}
     {{ end }}
-{{ end }}
 
-<!-- Twitter Card data -->
-<meta name="twitter:title" content="{{ .Title }}" />
-<meta name="twitter:description" content="{{if .IsPage}}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-{{ with $.Site.Params.Social.twitter }}
-    <meta name="twitter:site" content="@{{ . }}" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:title" content="{{ .Title }}" />
+    {{ with $.Site.Params.Social.twitter }}
+        <meta name="twitter:site" content="@{{ . }}" />
+    {{ end }}
 {{ end }}
