@@ -23,7 +23,7 @@
   background-color: {{ .Get "main_bg" }};
   color: {{ .Get "body_text" }};
   width: 100%;
-	max-width: 1080px;
+	max-width: 1331px;
 	margin: 25px auto;
 }
 
