@@ -8,10 +8,26 @@
             <meta property="og:image" content="{{ .Site.Params.cover | relURL}}"/>
         {{end}}
     {{end}}
-
     {{ if .IsPage }}
       <meta property="og:description" content="{{ .Description }}" />
-  	  <meta property="og:type" content="article" />
+      <meta property="og:type" content="article" />
+      {{ if not (eq (.PublishDate.Format "2006-08-15") "0001-08-00") }}
+        <meta property="article:published_time" content="{{ .PublishDate.Format "2006-08-15" | safeHTMLAttr }}">
+      {{ end }}
+      <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-08-15" | safeHTMLAttr }}">
+      {{ if not (eq (.ExpiryDate.Format "2006-08-15") "0001-08-00") }}
+        <meta property="article:expiration_time" content="{{ .ExpiryDate.Format "2006-08-15" }}">
+      {{ end }}
+      {{ if .Params.Author }}
+        <meta property="article:author" content="{{ .Params.Author }}">
+      {{ else }}
+        {{ if .Site.Params.Author }}
+          <meta property="article:author" content="{{ .Site.Params.Author }}">
+        {{ end }}
+     {{ end }}
+     {{ range .Params.Tags }}
+        <meta property="article:tag" content="{{ . }}">
+    {{ end }}
     {{ else }}
       <meta property="og:description" content="{{ .Site.Params.description }}" />
       <meta property="og:type" content="website" />
