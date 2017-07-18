@@ -14,7 +14,7 @@
 
 - [ ] Fix authorbox social-icons colour
 - [ ] Fix patreon banner to allow for different colours (black on white background / white on black)
-- [ ] Add explanation for upcoming_events
+- [ ] Add explanation for upcoming_events (also see [this](https://gohugo.io/templates/introduction/))
 
 ## Misc
 
@@ -36,8 +36,6 @@ This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/
 - [ ] Custom ordering of widgets in the sidebar
 
 ## Archetypes
-- [x] Add default archetype
-- [x] Add archetype for `post`
 
 ## Posts
 
@@ -45,6 +43,7 @@ This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/
 - [x] Allow optionally overriding site page navigation setting
    - [ ] Optionally show only the next or previous nav, even if Hugo says the other exists
 - [x] Optionally include a Table of Contents for the page
+- [ ] Add .Next, .NextInSection and .Prev, .PrevInSection (see [this](https://gohugo.io/variables/page/))
 
 ## Templates
 
