@@ -14,10 +14,12 @@
 
 - [ ] Fix authorbox social-icons colour
 - [ ] Fix patreon banner to allow for different colours (black on white background / white on black)
+- [ ] Add explanation for upcoming_events
 
 ## Misc
 
 - [ ] Get the site working HTTP or HTTPS
+- [ ] Add site search using https://lunrjs.com/
 
 This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/BluestNight) project. Items will be gradually migrated across to the project list.
 
@@ -44,18 +46,6 @@ This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/
    - [ ] Optionally show only the next or previous nav, even if Hugo says the other exists
 - [x] Optionally include a Table of Contents for the page
 
-## Color scheme
-
-- [x] Allow modification to certain base colors
-- [x] Figure out how to get the nav elements to turn (accent color) on hover
-- [x] Menu items that are also sub menus do not get marked active
-   - [x] Items in sub menus are not marked active - limitation in Hugo?
-- [x] (Optionally?) zebra stripe tables
-- [x] Override the text selection color
-- [x] .tag:active colors are not overridden
-- [x] Headers need to underline in white
-- [x] Sidebar widget headers should look like other headers, not turn accent color
-
 ## Templates
 
 - [ ] Implement [blocks](https://gohugo.io/templates/blocks/)
@@ -75,5 +65,3 @@ This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/
 - [x] Use CSS3 [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/@page) to modify the look for printing
 - [ ] Use CSS3 [@viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/@viewport) for small screens (Does Foundation already do this?)
 - [ ] Use CSS3 [@supports](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports) when necessary, e.g. for text select color
-- ~~[ ] Add SASS/LESS support for people to generate their own style sheets instead of using generated <style> tags~~
-  - Implemented Hugo-based CSS generation instead

@@ -1,4 +1,4 @@
-# Theme For Hugo - Skye
+# Theme For Hugo - Skye (Version 0.5)
 A dark theme with blue accents for Hugo. Provides multiple configuration options and overrides.
 
 This theme is a fork of [BluestNight](https://gitlab.com/Shadow53/BluestNight) and is a work in progress.
@@ -64,8 +64,8 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     rss_disable_summary = true
 
     custom_css = ["/css/powershellconsole.css" ]
-	custom_js_head = [""]	# Javascript URL's to place inside <script src=> tags in the header
-	custom_js_foot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
+    custom_js_head = [""]	# Javascript URL's to place inside <script src=> tags in the header
+    custom_js_foot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
 
     fontawesome = true
     fontawesome_cdn_embedcode = "1234567890"
@@ -97,6 +97,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     tags = true # Enable "Tags" widget
     patreon = "https://patreon.com/shadow53" # Enable "Patreon" widget
     tags_counter = true # Enable tag count on tag widgets
+    upcoming_events = false
 
 # This is required for CSS to work
 [outputs]
