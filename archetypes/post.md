@@ -1,7 +1,19 @@
 +++
-hide_authorbox = false
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+date: {{ .Date }}
+publishDate = {{ .Date }}
+lastmod = {{ .Date }}
+
 description = ""
-disable_comments = false
-draft = true
+keywords = ""
+sharing_tweet = ""
 thumbnail = ""
+thumbnail_caption = ""
+
+draft = true
+hide_authorbox = false
+disable_comments = false
+
+tags = [ "" ]
+categories = [ "" ]
 +++
