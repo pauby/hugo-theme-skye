@@ -1,0 +1,10 @@
+{{ if and .Site.Params.Widgets.my_twitter_feed .Site.Params.Social.twitter }}
+
+<div class="widget">
+    <header>
+        <h4><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> Twitter Feed</h4>
+    </header>
+    <a class="twitter-timeline" href="https://twitter.com/{{ .Site.Params.Social.twitter }}" data-chrome="noheader nofooter" data-tweet-limit="5">Tweets by pauby</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+{{ end }}
