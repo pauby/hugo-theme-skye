@@ -181,6 +181,16 @@ This is your [Font Awesome CDN Embed Code](http://fontawesome.io/get-started/). 
 
 See [fontawesome](#fontawesome) for more information.
 
+## Configuration - [Params.Footer]
+
+### copyright
+
+Whatever text is in this configuration vakue is displayed in the footer. Normally used for site copyright text, hence the name. The text can include normal markdown.
+
+``` toml 
+copyright = "&copy; My awesome site 2017. Powered by Hugo."
+```
+
 ## Configuration - [Params.Appearance]
 
 This section is for configuration of the sites appearance.

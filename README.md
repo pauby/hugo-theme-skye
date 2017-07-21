@@ -70,6 +70,9 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     fontawesome = true
     fontawesome_cdn_embedcode = "1234567890"
 
+[Params.Footer]
+    copyright = "&copy; pauby.com 2017. Powered by Hugo."
+
 # Custom background for the site
 [Params.Background]
     src = "/path/to/background.png"
