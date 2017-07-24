@@ -1,4 +1,5 @@
-# Theme For Hugo - Skye (Version 0.5)
+# Theme For Hugo - Skye (Version 0.52)
+
 A dark theme with blue accents for Hugo. Provides multiple configuration options and overrides.
 
 This theme is a fork of [BluestNight](https://gitlab.com/Shadow53/BluestNight) and is a work in progress.
@@ -26,6 +27,7 @@ You can find more details on certain features by scrolling down past this list
   - Recent posts list
   - Post tags list (sorted by most common)
   - Patreon banner
+  - Twitter timeline
 - Optional [authorbox](#authorbox) on post pages
 - `_index.md` support for all list pages, including custom content and hiding the list
 - Pagination
