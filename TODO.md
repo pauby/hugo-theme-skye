@@ -20,6 +20,7 @@
 
 - [ ] Get the site working HTTP or HTTPS
 - [ ] Add site search using https://lunrjs.com/
+- [ ] Add default copyright notice if one is not specified
 
 ## Content
 
