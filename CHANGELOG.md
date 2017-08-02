@@ -2,6 +2,11 @@
 
 Changes only recorded from v0.50
 
+# 0.53
+
+* Created [[metadata]] front matter variable to allow metadata to be inserted into the page;
+* Renamed the front matter configuration 'sharing_tweet' to 'twitter_description'; 
+
 # 0.52
 
 * Added tags to list item metadata and tidied up font sizes around the metadata
