@@ -11,6 +11,7 @@ Changes only recorded from v0.50
 * Added Meetup social icon (#11);
 * Fixed footer links colour;
 * Fixed colours of social icons within the authors box - colour of icons is now the body_text as defind in the config file (#12);
+* Added meetup icon to the authorbox. Member just has to add 'meetup = <meetup name>' in their member data file for it to be added (#13);
 
 # 0.52
 
