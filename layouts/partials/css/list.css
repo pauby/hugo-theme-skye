@@ -19,6 +19,21 @@
   padding: 0 10px 10px 0;
 }
 
+/* The listed post title */
+#post-list h4 {
+  margin-bottom: 0.25rem; 
+}
+
+#post-list .metadata {
+  margin: 0;
+  font-size: 0.75rem;
+  color: {{ .Get "body_text" }};
+}
+
+#post-list .metadata time {
+  margin-right: 1rem; 
+}
+
 /* Site main - pagination */
 
 .pagination .pagination-previous a,
