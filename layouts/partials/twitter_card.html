@@ -7,7 +7,7 @@
         {{ else }}
             <meta name="twitter:card" content="summary" />
         {{ end }}
-        {{ with .Params.sharing_tweet }}
+        {{ with .Params.twitter_description }}
             <meta name="twitter:description" content="{{ . }}" />
         {{ else }}
             <meta name="twitter:description" content="{{ .Description }}" /> 
