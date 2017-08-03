@@ -17,6 +17,18 @@
 
 /* Widgets -- Authorbox/Memberbox */
 
+#authorbox #social-icons a:link,
+#authorbox #social-icons a:visited,
+#authorbox #social-icons a:active,
+#authorbox #social-icons a:focus {
+  color: {{ .Get "body_text" }};
+  text-decoration: none;
+}
+
+#authorbox #social-icons a:hover {
+  color: {{ .Get "accent" }};
+}
+
 .memberbox {
   background-color: {{ .Get "main_bg" }};
   color: {{ .Get "body_text" }};
