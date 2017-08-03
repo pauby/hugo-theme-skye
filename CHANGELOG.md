@@ -6,11 +6,11 @@ Changes only recorded from v0.50
 
 * Created [[metadata]] front matter variable to allow metadata to be inserted into the page;
 * Renamed the front matter configuration 'sharing_tweet' to 'twitter_description'; 
+* Removed hosted font images and used fontawesome
 
 # 0.52
 
 * Added tags to list item metadata and tidied up font sizes around the metadata
-* Removed hosted font images and used fontawesome
 * Amended the default post front matter to replace the mistyped JSON with TOML
 
 # 0.51
