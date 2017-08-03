@@ -7,6 +7,7 @@ Changes only recorded from v0.50
 * Created [[metadata]] front matter variable to allow metadata to be inserted into the page;
 * Renamed the front matter configuration 'sharing_tweet' to 'twitter_description'; 
 * Removed hosted font images and used fontawesome
+* When no menus were configured the site did not render - added a check for this and skip rendering menus if none existed;
 
 # 0.52
 
