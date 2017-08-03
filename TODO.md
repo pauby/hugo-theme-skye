@@ -7,19 +7,25 @@
 ## Layouts
 
 - [ ] Update / create / amend / assess SEO;
-- [ ] Set [taxonomies]categories = "" and have the templates still work;
+- [X] Set [taxonomies]categories = "" and have the templates still work;
 - [X] if googleFonts (in config file) contains '+' then it is renders using the '%2b' html code. Raised [Hugo issue](https://github.com/spf13/hugo/issues/3588) for this and need to update this task accordingly.
 
 ## Widgets
 
 - [ ] Fix authorbox social-icons colour
-- [ ] Fix patreon banner to allow for different colours (black on white background / white on black)
+- [ ] Remove / replace patreon banner with freetext box
 - [ ] Add explanation for upcoming_events (also see [this](https://gohugo.io/templates/introduction/))
 
 ## Misc
 
 - [ ] Get the site working HTTP or HTTPS
 - [ ] Add site search using https://lunrjs.com/
+- [ ] Add default copyright notice if one is not specified
+
+## Content
+
+- [ ] Add .Next, .NextInSection and .Prev, .PrevInSection (see [this](https://gohugo.io/variables/page/))
+- [ ] Add Categories option for list page
 
 This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/BluestNight) project. Items will be gradually migrated across to the project list.
 
@@ -33,7 +39,7 @@ This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/
    - Menu is not visible on small screen if above happens (JS fix)
    - [x] Submenu does not expand after leaving small screen size (JS fix)
 - [ ] [Google Analytics](https://gohugo.io/extras/analytics/)
-- [ ] Custom ordering of widgets in the sidebar
+- [X] Custom ordering of widgets in the sidebar - the easiest way to do this was a custom sidebar.html in the site (not theme) and customise it for the pages you want. I did experiment adding this to the front matter but it just got too complicated and then I had the issue with list pages and how they would be configured;
 
 ## Archetypes
 
@@ -43,7 +49,6 @@ This is the TODO list from the forked [BluestNight](https://gitlab.com/Shadow53/
 - [x] Allow optionally overriding site page navigation setting
    - [ ] Optionally show only the next or previous nav, even if Hugo says the other exists
 - [x] Optionally include a Table of Contents for the page
-- [ ] Add .Next, .NextInSection and .Prev, .PrevInSection (see [this](https://gohugo.io/variables/page/))
 
 ## Templates
 

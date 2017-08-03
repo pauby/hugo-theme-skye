@@ -4,7 +4,9 @@
     <header>
         <h4><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> Twitter Feed</h4>
     </header>
-    <a class="twitter-timeline" href="https://twitter.com/{{ .Site.Params.Social.twitter }}" data-chrome="noheader nofooter" data-tweet-limit="5">Tweets by pauby</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  	<span style="float: left; margin-left: 10%"><a style="float: left" class="twitter-follow-button" href="https://twitter.com/{{ .Site.Params.Social.twitter }}" data-show-count="false">Follow @{{ .Site.Params.Social.twitter }}</a></span>
+	  <span style="float: right; margin-right: 10%"><a class="twitter-mention-button" href="https://twitter.com/intent/tweet?screen_name={{ .Site.Params.Social.twitter }}" data-show-count="false">Tweet to @{{ .Site.Params.Social.twitter }}</a></span>
+	  <a class="twitter-timeline" href="https://twitter.com/{{ .Site.Params.Social.twitter }}" data-chrome="noheader nofooter" data-tweet-limit="5">Tweets by pauby</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 {{ end }}
