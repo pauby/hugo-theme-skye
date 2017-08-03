@@ -103,6 +103,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     patreon = "https://patreon.com/shadow53" # Enable "Patreon" widget
     tags_counter = true # Enable tag count on tag widgets
     upcoming_events = false
+    my_twitter_feed = true
 
 # This is required for CSS to work
 [outputs]

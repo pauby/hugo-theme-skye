@@ -316,7 +316,7 @@ main_background_color = "#050505"
 
 ### alt_background_color
 
-Alternate background of site container, used on inactive buttons, alternatings table rows, and <code> and <pre> elements (code fields).
+Alternate background of site container, used on inactive buttons, alternating table rows, and `<code>` and `<pre>` elements (code fields).
 
 ``` toml
 alt_background_color = "#252525"
@@ -387,6 +387,14 @@ Include a parenthetical count of how often a tag has been used.
 
 ``` toml
 tags_counter = false
+```
+
+### my_twitter_feed
+
+This adds your twitter timeline to the sidebar. For the timeline to appear you also need to have set [twitter](#twitter) under [Params.Social][#social-icons---paramssocial]. The timeline is limited to 5 tweets and has no twitter header or footer.
+
+``` 
+my_twitter_feed = true
 ```
 
 ### patreon
