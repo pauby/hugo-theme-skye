@@ -2,6 +2,11 @@
 
 Changes only recorded from v0.50
 
+# 0.54
+
+* Moved the RSS template to a searched directory (#15);
+* Added hide_rss frontmatter variable to stop pages being added to the RSS feed (#16)
+
 # 0.53
 
 * Created [[metadata]] front matter variable to allow metadata to be inserted into the page;
