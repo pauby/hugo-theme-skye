@@ -13,6 +13,7 @@ thumbnail_caption = ""
 draft = true
 hide_authorbox = false
 disable_comments = false
+hide_rss = false
 
 tags = [ "" ]
 categories = [ "" ]
