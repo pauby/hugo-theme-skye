@@ -15,6 +15,7 @@ twitter_description = "Don't you just love #Hugo?"
 disable_comments = false
 draft = false
 hide_authorbox = false
+hide_rss = true
 thumbnail = "/images/banner-image.jpg"
 thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
 
@@ -79,6 +80,14 @@ If this is true, the authorbox on this post is not shown. There is also a site w
 ``` toml
 hide_authorbox = true
 ```
+
+### hide_rss
+
+This will hide the page from the rss feed so that it will not appear in there. You might create a contact 'thankyou' page which will appear in the feed as normal. Using this frontmatter variable will stop it appearing.
+
+``` toml
+hide_rss = true
+``` 
 
 ### metadata
 
