@@ -389,12 +389,13 @@ Include a parenthetical count of how often a tag has been used.
 tags_counter = false
 ```
 
-### my_twitter_feed
+### twitter_feed
 
-This adds your twitter timeline to the sidebar. For the timeline to appear you also need to have set [twitter](#twitter) under [Params.Social][#social-icons---paramssocial]. The timeline is limited to 5 tweets and has no twitter header or footer.
+This adds your twitter timeline to the sidebar and shows the last tweets from your feed. For the timeline to appear you also need to have set [twitter](#twitter) under [Params.Social][#social-icons---paramssocial]. The number of tweets to be shown has to be > 0.
 
 ``` 
-my_twitter_feed = true
+# Show the last 3 tweets from my twitter feed
+twitter_feed = 3
 ```
 
 ### patreon

@@ -6,6 +6,7 @@ Changes only recorded from v0.50
 
 * Moved the RSS template to a searched directory (#15);
 * Added hide_rss frontmatter variable to stop pages being added to the RSS feed (#16)
+* Changed the config variable 'my_twitter_feed' to 'twitter_feed' and allows you to provide a number for the tweets to be shown (#17)
 
 # 0.53
 
