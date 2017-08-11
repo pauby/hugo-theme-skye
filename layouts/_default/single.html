@@ -1,4 +1,7 @@
 {{ partial "header.html" . }}
+  <div id="main-container" class="row" role="main">
+    {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
+
   <main class="row-item small-full medium-two-thirds large-three-quarters">
     <article id="post-article">
       <header id="page-header">
