@@ -1,3 +1,17 @@
+
+.share-box {
+    margin: auto;
+    text-align: center;
+    border-style: solid hidden;
+    border-color: {{ .Get "alt_body_text" }};
+    border-width: 1px;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.share-box .article-title {
+    font-weight: bold;
+}
+
 /* Share button CSS courtesy of https://github.com/gschier/html-share-buttons */
 
 .share-btn {
@@ -5,11 +19,12 @@
     color: #ffffff;
     border: none;
     padding: 0.5em;
-    width: 4em;
+    width: 6em;
     opacity: 0.9;
     box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
     outline: none;
     text-align: center;
+    margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .share-btn:hover,
