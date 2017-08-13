@@ -2,6 +2,10 @@
 
 Changes only recorded from v0.50
 
+# 0.55 
+
+* Tags list in the sidebar had a fixed font size of 12px. This has been removed to allow CSS styling;
+
 # 0.54
 
 * Moved the RSS template to a searched directory (#15);
