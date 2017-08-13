@@ -24,6 +24,7 @@ summary, time, mark, audio, video {
  font-size:100%;
  vertical-align:baseline;
  background:transparent;
+ font-weight: normal;
 }
 body {
  line-height:1;
