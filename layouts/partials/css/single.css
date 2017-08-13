@@ -34,6 +34,10 @@ li img {
   justify-content: center;
 }
 
+#post-metadata time {
+  margin-right: 1rem;
+}
+
 /* Site main - taxonomy list */
 
 .taxonomy-item {
