@@ -10,9 +10,12 @@
   color: {{ .Get "body_text" }};
 }
 
-#post-tags {
-  margin: auto;
-  width: 50%;
+#post-tags .menu {
+  justify-content: center;
+}
+
+#post-tags i {
+  font-size: 2rem;
 }
 
 #post-tags .button {
