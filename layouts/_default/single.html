@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-    <figure style="background-image: url( {{ .Params.thumbnail }} ); background-size: cover; background-repeat: no-repeat; height: 500px">
+    <figure class="post-banner" style="background-image: url( {{ .Params.thumbnail }} )">
     </figure>
   <div id="main-container" class="row" role="main">
     {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
