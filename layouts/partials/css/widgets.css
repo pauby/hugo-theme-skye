@@ -6,7 +6,7 @@
 }
 
 .widget ul li {
-  border-bottom: 1px dotted {{ .Get "body_text" }};
+  border-bottom: 1px dotted {{ .Get "alt_body_text" }};
   padding: 0.2rem;
   font-size: 0.9rem;
 }
@@ -29,18 +29,25 @@
   color: {{ .Get "accent" }};
 }
 
+#authorbox .authorname {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 .memberbox {
   background-color: {{ .Get "main_bg" }};
   color: {{ .Get "body_text" }};
   padding: 1rem 0.7rem;
-  border-style: solid hidden;
-  border-color: {{ .Get "body_text" }};
-  border-width: 1px;
+  border-bottom: 1px solid {{ .Get "alt_body_text" }};
   flex-wrap: nowrap;
 }
 
+.memberbox .top-border {
+  border-top: 1px solid {{ .Get "alt_body_text" }};
+}
+
 .memberbox img {
-  border: 3px solid {{ .Get "body_text" }};
+  border: 3px solid {{ .Get "alt_body_text" }};
 }
 
 .member-avatar {

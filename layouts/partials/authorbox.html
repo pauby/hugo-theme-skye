@@ -2,13 +2,17 @@
 
 {{ range $.Site.Data.members }}
 	{{ if or (and (and (isset $.Site.Params "author") (not (isset $.Params "author"))) (eq .name $.Site.Params.author )) (and (isset $.Params "author") (eq .name $.Params.author)) }}
-	<div id="authorbox" class="row vcenter memberbox">
+  {{ if (not .Params.disable_sharing) }}
+  <div id="authorbox" class="row vcenter memberbox">
+  {{ else }}
+  <div id="authorbox" class="row vcenter memberbox top-border">
+  {{ end }}
 		<div class="row-item member-avatar">
 				<img alt="{{ .name }} avatar" src="{{ with .img }}{{ . | relURL }}{{ else }}{{ "images/profile.jpg" | absURL }}{{ end }}" height="90" width="90">
 		</div>
 		<div class="row-item member-bio">
 			<div>
-				<span class="widget-title">About {{ .name }}</span>
+				<span class="authorname">About {{ .name }}</span>
         <span style="float: right" class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
           {{ with .deviantart }}<a href="https://{{ . }}.deviantart.com"><i class="fa fa-deviantart fa-fw" aria-hidden="true"></i></a>{{ end }}
           {{ with .facebook }}<a href="https://facebook.com/{{ . }}"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>{{ end }}
