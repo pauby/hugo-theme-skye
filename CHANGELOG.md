@@ -10,6 +10,12 @@ Changes only recorded from v0.50
 # 0.54
 
 * Moved the RSS template to a searched directory (#15);
+* Added hide_rss frontmatter variable to stop pages being added to the RSS feed (#16);
+* Increased page width to match browser, increased size definition of a large screen to 1366px and adjusted column percentages for large screens;
+* Boxed the post sharing icons, formatted them so that if they wrap due to screen size they maintain their margins and added instructions;
+* Centred the post tags and pushed them to be at the bottom of the post;
+* Removed bold from CSS header (h1 etc.) and resized them;
+* Moved the image banner to be above the content and sidebar; 
 * Added hide_rss frontmatter variable to stop pages being added to the RSS feed (#16)
 * Changed the config variable 'my_twitter_feed' to 'twitter_feed' and allows you to provide a number for the tweets to be shown (#17)
 
