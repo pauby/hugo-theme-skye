@@ -1,7 +1,7 @@
 {{ if .Params.tags }}
 <div id="post-tags">
 	<ul class="menu">
-    <li class="row-item">{{ if (eq (len .Site.Taxonomies.tags) 1) }}<i class="fa fa-tag fa-fw"></i>{{ else }}<i class="fa fa-tag-multiple fa-fw"></i>{{ end }}</li>
+    <li class="row-item">{{ if (eq (len .Site.Taxonomies.tags) 1) }}<i class="fa fa-tag fa-fw"></i>{{ else }}<i class="fa fa-tags fa-fw"></i>{{ end }}</li>
 		{{ range .Params.tags }}
 		<li><a class="row-item button" href="{{ "tags/" | relLangURL }}{{ . | urlize }}/" rel="tag">{{ lower . }}</a></li>
 		{{ end }}
