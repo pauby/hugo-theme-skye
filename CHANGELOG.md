@@ -7,7 +7,9 @@ Changes only recorded from v0.50
 * Tags list in the sidebar had a fixed font size of 12px. This has been removed to allow CSS styling;
 * Improve the look of the date and estimated reading metadata in the header by replacing missing icons with fontawesome ones and styling with CSS;
 * Centred post title and metadata in the list template;
-* Corrected a typo that stopped the calendar icon on the date being fixed width; 
+* Corrected a typo that stopped the calendar icon on the date being fixed width;
+* Removed inline styling from the post banner page and replaced with CSS code;
+* Fixed issue where tags would not centre correctly at the bottom of the post and the tag icon was missing;
 
 # 0.54
 
