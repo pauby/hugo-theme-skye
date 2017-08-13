@@ -5,7 +5,12 @@
 }
 
 #post-tags {
-  margin: 1rem 0.4rem 1rem;
+  margin: auto;
+  width: 50%;
+}
+
+#post-tags .button {
+  margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 main img {
