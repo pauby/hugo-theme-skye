@@ -1,15 +1,18 @@
 {{ partial "header.html" . }}
-  <main class="row-item small-full medium-two-thirds">
+    <figure style="background-image: url( {{ .Params.thumbnail }} ); background-size: cover; background-repeat: no-repeat; height: 500px">
+    </figure>
+  <div id="main-container" class="row" role="main">
+    {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
+
+  <main class="row-item small-full medium-two-thirds large-three-quarters">
     <article id="post-article">
       <header id="page-header">
         <h1>{{ .Title }}</h1>
         {{ if or (not .Date.IsZero) (.Params.categories) }}
   			<p id="post-metadata" class="row">
           {{ if not .Date.IsZero }}
-          <span class="row-item">
     				<i class="fi-clock"></i>
-    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}</time>
-          </span>
+    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}&nbsp;&nbsp;&nbsp;&nbsp;</time>
   				{{ end }}
 <!--  				{{ if .Params.categories }}
   				<span class="row-item">
@@ -18,25 +21,20 @@
           </span>
   				{{ end }}-->
           {{ if not .Params.hide_readingtime }}
-          <span class="row-item">Estimated reading time: ~{{ .ReadingTime }} minutes</span>
+          Estimated reading time: ~{{ .ReadingTime }} minutes
           {{ end }}
   			</p>
   			{{ end }}
       </header>
       <div id="post-content">
-        {{ if .Params.thumbnail }}
-  			<figure class="thumbnail">
-  				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
-          {{ if .Params.thumbnail_caption }}
-            <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
-          {{ end }}
-  			</figure>
-  			{{ end }}
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
-  			{{ .Content }}
+        {{ .Content }}
+        {{ if .Params.thumbnail_caption }}
+          <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
+        {{ end }}
+        {{ partial "post_tags.html" . }}
         {{ partial "sharing.html" . }}
   		</div>
-      {{ partial "post_tags.html" . }}
     </article>
     {{ partial "authorbox.html" . }}
   	{{ partial "post_nav.html" . }}
