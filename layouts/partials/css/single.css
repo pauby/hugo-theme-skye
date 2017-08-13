@@ -1,5 +1,11 @@
 /* Site main - single */
 
+.post-banner {
+  background-size: cover; 
+  background-repeat: no-repeat;
+  height: 400px
+}
+
 #post-metadata a {
   color: {{ .Get "body_text" }};
 }
