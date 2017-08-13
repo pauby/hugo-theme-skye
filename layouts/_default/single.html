@@ -32,9 +32,9 @@
         {{ if .Params.thumbnail_caption }}
           <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
         {{ end }}
+        {{ partial "post_tags.html" . }}
         {{ partial "sharing.html" . }}
   		</div>
-      {{ partial "post_tags.html" . }}
     </article>
     {{ partial "authorbox.html" . }}
   	{{ partial "post_nav.html" . }}
