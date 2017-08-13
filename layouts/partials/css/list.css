@@ -1,13 +1,9 @@
 #post-list article {
-  border-bottom: 1px solid {{ .Get "body_text" }};
+  border-bottom: 1px solid {{ .Get "alt_body_text" }};
 }
 
 #post-list .media-object-section {
   padding: 0;
-}
-
-#post-list article h4 {
-  font-weight: bold;
 }
 
 .post-list-thumbnail {
@@ -20,8 +16,12 @@
 }
 
 /* The listed post title */
-#post-list h4 {
-  margin-bottom: 0.25rem; 
+.post-list-title {
+  text-align: center;
+}
+
+.post-list-title h4 {
+  margin: 1rem 0 0.25rem 0;
 }
 
 #post-list .metadata {
