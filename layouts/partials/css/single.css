@@ -20,6 +20,15 @@ li img {
   padding: 1rem 0 1rem 0;
 }
 
+#page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#page-header #post-metadata {
+  justify-content: center;
+}
+
 /* Site main - taxonomy list */
 
 .taxonomy-item {
@@ -82,7 +91,16 @@ table tbody tr {
   margin-right: auto
 }
 
-.thumbnail figcaption {
+#post-content h1, 
+#post-content h2,
+#post-content h3,
+#post-content h4,
+#post-content h5,
+#post-content h6 {
+  text-align: center;
+}
+
+figcaption {
   font-style: italic;
   font-size: 0.75rem;
   margin-bottom: 1.5rem; 
