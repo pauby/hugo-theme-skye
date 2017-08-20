@@ -1,5 +1,11 @@
 {{ partial "header.html" . }}
+  {{ if .Params.thumbnail }}
+  <figure class="post-banner" style="background-image: url( {{ .Params.thumbnail }} )">
+  </figure>
   <div id="main-container" class="row" role="main">
+  {{ else }}
+  <div id="main-container" class="row no-post-banner" role="main">
+  {{ end }}
     {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
     
   <main id="post-list" class="row-item small-full medium-two-thirds large-three-quarters">
