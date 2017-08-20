@@ -15,6 +15,10 @@
   font-size: 1.3rem;
 }
 
+.widget ul h6 {
+  margin-top: 0.5rem;  
+}
+
 /* Widgets -- Authorbox/Memberbox */
 
 #authorbox #social-icons a:link,
