@@ -74,12 +74,6 @@
   <body>
     <div id="site-container">
       <div id="site-header">
-        <header class="small-text-center medium-text-left">
-          <a href="{{ .Site.BaseURL }}">
-            <span id="site-title">{{ .Site.Title }}</span>
-            {{ with .Site.Params.tagline }}<br/><span id="site-tagline">{{ . }}</span>{{ end }}
-          </a>
-        </header>
         {{ partial "menu.html" . }}
       </div>
 
