@@ -1,8 +1,12 @@
 {{ partial "header.html" . }}
-    <figure style="background-image: url( {{ .Params.thumbnail }} ); background-size: cover; background-repeat: no-repeat; height: 500px">
-    </figure>
+  {{ if .Params.thumbnail }}
+  <figure class="post-banner" style="background-image: url( {{ .Params.thumbnail }} )">
+  </figure>
   <div id="main-container" class="row" role="main">
-    {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
+  {{ else }}
+  <div id="main-container" class="row no-post-banner" role="main">
+  {{ end }}
+  {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
 
   <main class="row-item small-full medium-two-thirds large-three-quarters">
     <article id="post-article">
@@ -11,8 +15,8 @@
         {{ if or (not .Date.IsZero) (.Params.categories) }}
   			<p id="post-metadata" class="row">
           {{ if not .Date.IsZero }}
-    				<i class="fi-clock"></i>
-    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}&nbsp;&nbsp;&nbsp;&nbsp;</time>
+    				<i class="fa fa-clock-o fa-fw"></i>
+    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}</time>
   				{{ end }}
 <!--  				{{ if .Params.categories }}
   				<span class="row-item">
@@ -21,7 +25,7 @@
           </span>
   				{{ end }}-->
           {{ if not .Params.hide_readingtime }}
-          Estimated reading time: ~{{ .ReadingTime }} minutes
+          <i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes
           {{ end }}
   			</p>
   			{{ end }}

@@ -4,9 +4,12 @@
   color: {{ .Get "body_text" }};
 }
 
-#post-tags {
-  margin: auto;
-  width: 50%;
+#post-tags .menu {
+  justify-content: center;
+}
+
+#post-tags i {
+  font-size: 2rem;
 }
 
 #post-tags .button {
@@ -32,6 +35,10 @@ li img {
 
 #page-header #post-metadata {
   justify-content: center;
+}
+
+#post-metadata time {
+  margin-right: 1rem;
 }
 
 /* Site main - taxonomy list */
@@ -96,13 +103,18 @@ table tbody tr {
   margin-right: auto
 }
 
-#post-content h1, 
-#post-content h2,
-#post-content h3,
-#post-content h4,
-#post-content h5,
-#post-content h6 {
+#post-article h1, 
+#post-article h2,
+#post-article h3,
+#post-article h4,
+#post-article h5,
+#post-article h6 {
+  font-family: {{ .Get "post_header_font" }}
   text-align: center;
+}
+
+#post-article {
+    font-family: {{ .Get "post_text_font" }}
 }
 
 figcaption {
