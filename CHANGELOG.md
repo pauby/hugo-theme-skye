@@ -10,6 +10,8 @@ Changes only recorded from v0.50
 * Corrected a typo that stopped the calendar icon on the date being fixed width;
 * Removed inline styling from the post banner page and replaced with CSS code;
 * Fixed issue where tags would not centre correctly at the bottom of the post and the tag icon was missing;
+* Changed the list page thumbnail to be a maximum width of 200px rather than focus on height size;
+* Added [Params.fonts] section and added default_font which applies to all text on the site, post_header_font which styles post headers and post_text_font which styles the text of the post text;
 
 # 0.54
 
