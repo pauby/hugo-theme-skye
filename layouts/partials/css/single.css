@@ -109,13 +109,17 @@ table tbody tr {
   margin-right: auto
 }
 
-#post-content h1, 
-#post-content h2,
-#post-content h3,
-#post-content h4,
-#post-content h5,
-#post-content h6 {
+#post-article h1, 
+#post-article h2,
+#post-article h3,
+#post-article h4,
+#post-article h5,
+#post-article h6 {
   text-align: center;
+}
+
+#post-article {
+    font-family: {{ .Get "post_text_font" }}
 }
 
 figcaption {
