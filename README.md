@@ -1,4 +1,6 @@
-# Theme For Hugo - Skye (Version 0.52)
+# Theme For Hugo - Skye 
+
+(See [changelog](/CHANGELOG.md) for latest version and changes)
 
 A dark theme with blue accents for Hugo. Provides multiple configuration options and overrides.
 

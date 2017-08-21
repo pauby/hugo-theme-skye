@@ -6,7 +6,7 @@ lastmod = {{ .Date }}
 
 description = ""
 keywords = ""
-sharing_tweet = ""
+short_description = ""
 thumbnail = ""
 thumbnail_caption = ""
 
@@ -17,4 +17,12 @@ hide_rss = false
 
 tags = [ "" ]
 categories = [ "" ]
+
+[[metadata]]
+name = "sharing:twitter"
+content = "true"
+
+[[metadata]]
+name = "sharing:reddit"
+content = "/r/hugo"
 +++
