@@ -85,10 +85,10 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
 
 [Params.fonts]
 
-	googlefonts = [ "Lato", "Libre Franklin" ] 
+    googlefonts = [ "Lato", "Libre Franklin" ] 
 
     default_font = "Lato"
-	post_header_font = "Libre Franklin, Arial"
+    post_header_font = "Libre Franklin, Arial"
     post_text_font = "Libre Franklin, Arial"
     code_font = "Courier New"
 
