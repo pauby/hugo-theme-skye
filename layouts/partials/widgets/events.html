@@ -1,3 +1,4 @@
+
 {{ if .Site.Params.widgets.upcoming_events }}
 <div class="widget">
 	<header>
@@ -5,14 +6,20 @@
 	</header>
 	<a class="widget-header-small button" href="webcal://{{ replace (replace $.Site.BaseURL "https://" "") "http://" ""}}index.ics"><span class="fa fa-calendar-plus-o"></span> Subscribe with iCal</a>
 	<ul>
+		{{ $.Scratch.Set "count" 0 }}
 		{{ range sort $.Site.Data.events "startDatetime" "asc" }}
-			{{ if ge .Date.Unix .Now.Unix }}
+			{{ if and (ge (time .startDatetime).Unix (time now).Unix) (lt ($.Scratch.Get "count") $.Site.Params.widgets.upcoming_events) }}
+			{{ $.Scratch.Set "count" (add ($.Scratch.Get "count") 1) }}
 			<li itemscope itemtype="http://schema.org/Event">
       			<h6 itemprop="name">{{ .name }}</h6>
 				<time datetime="{{ dateFormat "2006-01-02T15:04:05" .startDatetime }}" content="{{ dateFormat "2006-01-02T15:04:05" .startDatetime }}" itemprop="startDate">{{ dateFormat "02/01/2006 @ 15:04" .startDatetime }}</time>
 				-
+				{{ if ne (dateFormat "02/01/2006" .startDatetime) (dateFormat "02/01/2006" .endDatetime) }}
 				<time datetime="{{ dateFormat "2006-01-02T15:04:05" .endDatetime }}" content="{{ dateFormat "2006-01-02T15:04:05" .endDatetime }}" itemprop="endDate">{{ dateFormat "02/01/2006 @ 15:04" .endDatetime }}</time>
-      			<br/><span itemprop="about">{{ .description }}</span>
+				{{ else }}
+				<time datetime="{{ dateFormat "2006-01-02T15:04:05" .endDatetime }}" content="{{ dateFormat "2006-01-02T15:04:05" .endDatetime }}" itemprop="endDate">{{ dateFormat "15:04" .endDatetime }}</time>
+				{{ end }}
+				<br/><span itemprop="about">{{ .description }}</span>
 			</li>
 			{{ end }}
 		{{ end }}
