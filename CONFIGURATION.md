@@ -191,61 +191,9 @@ Whatever text is in this configuration vakue is displayed in the footer. Normall
 copyright = "&copy; My awesome site 2017. Powered by Hugo."
 ```
 
-## Configuration - [Params.Appearance]
+## Configuration - [Params.Fonts]
 
-This section is for configuration of the sites appearance.
-
-### googlefonts
-
-This controls the [Google Fonts](https://fonts.google.com/) that are loaded with your site.
-
-``` toml
-googlefonts = [ "Bitter", "Source+Sans+Pro" ]
-```
-
-This will load the Bitter and Source Sans Pro fonts. Note that **any spaces in your font name must be replaced by +** or the font may not be loaded.
-
-See the `header.html` for the code.
-
-###	header_font
-
-The font used for the `h1` to `h6` headers on your site.
-
-``` toml
-header_font = "Bitter, Source Sans Pro"
-```
-
-Produces this CSS code:
-
-``` css
-h1,h2,h3,h4,h5,h6 {
-  font-family: Bitter, Source Sans Pro, sans-serif;
-}
-```
-
-This will use the Bitter, then the Source Sans Pro font for the `h` headers. Note that whatever you put here will have sans-serif added as the final fallback font should none of the others be available.
-
-See the `index.css` for config variables and `reset.css` for the CSS.
-
-###	text_font
-
-The font used for the normal text on your site. This font is set on the CSS for the `body {}`.
-
-``` toml
-text_font = "Bitter, Source Sans Pro"
-```
-
-Produces this CSS code:
-
-``` css
-body {
-  font-family: Bitter, Source Sans Pro, sans-serif;
-}
-```
-
-This will use the Bitter, then the Source Sans Pro font for text. Note that whatever you put here will have sans-serif added as the final fallback font should none of the others be available.
-
-See the `index.css` for config variables and `reset.css` for the CSS.
+This section is for configuration of the sites fonts.
 
 ### code_font
 
@@ -264,6 +212,78 @@ code, pre {
 ```
 
 This will use the Courier New font for code text. Note that whatever you put here will have `monospace` added as the final fallback font should none of the others be available.
+
+See the `index.css` for config variables and `reset.css` for the CSS.
+
+### default_font
+
+The font used for the site by default.
+
+``` toml
+default_font = "Arial"
+```
+
+Produces this CSS code:
+
+``` css
+body {
+  font-family: Arial, sans-serif;
+}
+```
+
+This will use the Arial font for all site text (without specific styling). 
+
+See the `index.css` for config variables and `reset.css` for the CSS.
+
+### googlefonts
+
+This controls the [Google Fonts](https://fonts.google.com/) that are loaded with your site.
+
+``` toml
+googlefonts = [ "Bitter", "Source+Sans+Pro" ]
+```
+
+This will load the Bitter and Source Sans Pro fonts. Note that **any spaces in your font name must be replaced by +** or the font may not be loaded.
+
+See the `header.html` for the code.
+
+###	post_header_font
+
+The font used for the `h1` to `h6` headers on your site.
+
+``` toml
+post_header_font = "Bitter, Source Sans Pro"
+```
+
+Produces this CSS code:
+
+``` css
+#post-article h1 ... #post-article h6 {
+  font-family: Bitter, Source Sans Pro, sans-serif;
+}
+```
+
+This will use the Bitter, then the Source Sans Pro font for the `h` headers. Note that whatever you put here will have sans-serif added as the final fallback font should none of the others be available.
+
+See the `index.css` for config variables and `reset.css` for the CSS.
+
+###	post_text_font
+
+The font used for the normal text on your site. This font is set on the CSS for the `body {}`.
+
+``` toml
+post_text_font = "Bitter, Source Sans Pro"
+```
+
+Produces this CSS code:
+
+``` css
+#post-article {
+  font-family: Bitter, Source Sans Pro, sans-serif;
+}
+```
+
+This will use the Bitter, then the Source Sans Pro font for text. Note that whatever you put here will have sans-serif added as the final fallback font should none of the others be available.
 
 See the `index.css` for config variables and `reset.css` for the CSS.
 

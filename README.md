@@ -83,6 +83,15 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     fit_width = true
     tile = false
 
+[Params.fonts]
+
+	googlefonts = [ "Lato", "Libre Franklin" ] 
+
+    default_font = "Lato"
+	post_header_font = "Libre Franklin, Arial"
+    post_text_font = "Libre Franklin, Arial"
+    code_font = "Courier New"
+
 # These are the default colors used in the theme
 # Change them to whatever you'd like
 [Params.Color]
