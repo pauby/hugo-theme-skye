@@ -17,6 +17,7 @@ draft = false
 hide_authorbox = false
 hide_rss = true
 thumbnail = "/images/banner-image.jpg"
+thumbnail_offset = "0px 0px"
 thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
 
 categories = [ "Interesting", "Chocolate" ]
@@ -134,6 +135,22 @@ This image is used as the banner for your post. It is shown in the list pages co
 ``` toml
 thumbnail = "/images/mylovelyhorse.jpg"
 ```
+
+### thumbnail_offset
+
+The x and y offset, in pixels, of the banner image when displayed on the single post. Whatever is contained in this string is put into the `background-position` css for the thumbnail.
+
+``` toml
+thumbnail_offset = "0px -200px"
+```
+
+Produces this CSS:
+
+``` css
+style="background-position: 0px -200px; ..."
+```
+
+See [background-position CSS](https://www.w3schools.com/cssref/pr_background-position.asp) for more information.
 
 ### thumbnail_caption 
 
