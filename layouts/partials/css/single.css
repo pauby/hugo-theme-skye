@@ -109,6 +109,7 @@ table tbody tr {
 #post-article h4,
 #post-article h5,
 #post-article h6 {
+  font-family: {{ .Get "post_header_font" }}
   text-align: center;
 }
 
