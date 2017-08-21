@@ -105,14 +105,15 @@
 
   .medium-third {
     flex: 0 0 33.33333%;
-    width: 33.33333%:
-    max-width: 33.33333%:
+    width: 33.33333%;
+    max-width: 33.33333%;
   }
 
   .medium-two-thirds {
     flex: 0 0 66.66667%;
     width: 66.66667%;
     max-width: 66.66667%;
+    padding: 3%;
   }
 
   .medium-text-left { text-align: left; }
@@ -190,6 +191,7 @@
     flex: 0 0 50%;
     width: 50%;
     max-width: 50%;
+    padding: 5%;
   }
 
   .large-quarter {
@@ -202,6 +204,7 @@
     flex: 0 0 75%;
     width: 75%;
     max-width: 75%;
+    padding: 5%;
   }
 
   .large-third {
@@ -214,6 +217,7 @@
     flex: 0 0 66.66667%;
     width: 66.66667%;
     max-width: 66.66667%;
+    padding: 5%;
   }
 
   .large-text-left { text-align: left; }

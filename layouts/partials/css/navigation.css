@@ -1,6 +1,15 @@
 /* Site nav (including tag buttons) */
 
 #main-nav {
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  opacity: 0.8;
+  position: fixed; 
+  
+  padding: 1rem 10% 1rem 10%; 
+
   background-color: {{ .Get "alt_bg" }};
 }
 
