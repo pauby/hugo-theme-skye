@@ -49,7 +49,7 @@
     </script>
     {{end}}
 
-    {{ range .Site.Params.Appearance.googlefonts }}
+    {{ range .Site.Params.fonts.googlefonts }}
       <link rel="stylesheet" {{ printf "href=\"//fonts.googleapis.com/css?family=%s\"" . | safeHTMLAttr }} type="text/css" media="all" />
     {{ end }}
     {{ if ($.Site.Params.fontawesome) }}
