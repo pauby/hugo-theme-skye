@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
   {{ if .Params.thumbnail }}
-  <figure class="post-banner" style="background-image: url( {{ .Params.thumbnail }} )">
+  <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} )">
   </figure>
   <div id="main-container" class="row" role="main">
   {{ else }}

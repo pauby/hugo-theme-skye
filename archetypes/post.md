@@ -8,6 +8,7 @@ description = ""
 keywords = ""
 short_description = ""
 thumbnail = ""
+thumbnail_offset = "0px 0px"
 thumbnail_caption = ""
 
 draft = true
