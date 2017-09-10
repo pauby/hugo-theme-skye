@@ -16,7 +16,7 @@
 }
 
 .widget ul h6 {
-  margin-top: 0.5rem;  
+  margin-top: 1rem;  
 }
 
 /* Widgets -- Authorbox/Memberbox */
@@ -62,4 +62,12 @@
   /* Contain the banner within the sidebar */
 #patreon-banner {
   width: 100%;
+}
+
+/* Widgets - Events */
+
+.widget .event-start-end {
+  border-top: 1px dotted black; 
+  border-bottom: 1px dotted black; 
+  padding: 0.25rem;
 }

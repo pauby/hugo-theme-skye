@@ -2,6 +2,12 @@
 
 Changes only recorded from v0.50
 
+# 0.56
+
+* Amended events widget to: display event until end time expires; add a url for more information to the event title; styled event with boredrs around date;
+* Added caption for list pages with thumbnail banner;
+* Fixed issue with header not loading Google fonts;
+
 # 0.55 
 
 * Tags list in the sidebar had a fixed font size of 12px. This has been removed to allow CSS styling;

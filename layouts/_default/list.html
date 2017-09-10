@@ -28,5 +28,8 @@
       {{ end }}
       {{ partial "pagination.html" . }}
     {{ end }}
+    {{ if .Params.thumbnail_caption }}
+      <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
+    {{ end }}
   </main>
 {{ partial "footer.html" . }}
