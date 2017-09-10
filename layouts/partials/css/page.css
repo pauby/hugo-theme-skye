@@ -144,6 +144,7 @@ footer {
   padding: 0.5rem 1rem;
   background-color: {{ .Get "alt_bg" }};
   border-top: 3px solid #999999;
+  color: {{ .Get "alt_body_text" }};
 }
 
 footer p {
@@ -151,12 +152,12 @@ footer p {
 }
 
 footer a {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "alt_body_text" }};
   text-decoration: underline;
 }
 
 footer a:hover {
-  color: {{ .Get "alt_body_text" }};
+  color: {{ .Get "body_text" }};
 }
 
 #social-icons {
