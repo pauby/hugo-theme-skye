@@ -2,6 +2,12 @@
 
 Changes only recorded from v0.50
 
+# 0.57
+* Added new shortcode - mva - allows Microsoft Virtual Academy videos to be embedded. Video will expand to the size of the current div it is in;
+* Added ability to adjust the offset of the background image that is shown on a page;
+* Fixed footer colours and events layout spacing;
+* Fixed tags url which had spaces being added and caused 404 errors;
+
 # 0.56
 
 * Amended events widget to: display event until end time expires; add a url for more information to the event title; styled event with boredrs around date;
