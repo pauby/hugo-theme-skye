@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
   {{ if .Params.thumbnail }}
-  <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} )">
+  <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} );">
+  {{ if .Params.thumbnail_caption }}
+    <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
+  {{ end }}
   </figure>
   <div id="main-container" class="row" role="main">
   {{ else }}
@@ -33,9 +36,6 @@
       <div id="post-content">
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
         {{ .Content }}
-        {{ if .Params.thumbnail_caption }}
-          <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
-        {{ end }}
         {{ partial "post_tags.html" . }}
         {{ partial "sharing.html" . }}
   		</div>
