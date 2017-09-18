@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
   {{ if .Params.thumbnail }}
-  <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} )">
+  <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} );">
+  {{ if .Params.thumbnail_caption }}
+    <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
+  {{ end }}
   </figure>
   <div id="main-container" class="row" role="main">
   {{ else }}
@@ -27,9 +30,6 @@
     		{{ end }}
       {{ end }}
       {{ partial "pagination.html" . }}
-    {{ end }}
-    {{ if .Params.thumbnail_caption }}
-      <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
     {{ end }}
   </main>
 {{ partial "footer.html" . }}
