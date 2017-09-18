@@ -29,6 +29,11 @@ summary, time, mark, audio, video {
 body {
  line-height:1;
 }
+
+b, strong {
+    font-weight: 700;
+}
+
 article,aside,details,figcaption,figure,
 figcaption, footer,header,hgroup,menu,nav,section {
  display:block;
