@@ -117,8 +117,3 @@ table tbody tr {
     font-family: {{ .Get "post_text_font" }};
 }
 
-figcaption {
-  font-style: italic;
-  font-size: 0.75rem;
-  margin-bottom: 1.5rem; 
-}
