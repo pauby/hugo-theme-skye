@@ -17,7 +17,7 @@ draft = false
 hide_authorbox = false
 hide_rss = true
 thumbnail = "/images/banner-image.jpg"
-thumbnail_offset = "0px 0px"
+thumbnail_css_class = "banner"
 thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
 
 categories = [ "Interesting", "Chocolate" ]
@@ -136,23 +136,27 @@ This image is used as the banner for your post. It is shown in the list pages co
 thumbnail = "/images/mylovelyhorse.jpg"
 ```
 
-### thumbnail_offset
+### thumbnail_css_class
 
-The x and y offset, in pixels, of the banner image when displayed on the single post. Whatever is contained in this string is put into the `background-position` css for the thumbnail.
+The class to apply to this particular thumbnail image when displayed on the single post. Whatever is contained in this string is put into the `class` attribute.
 
 ``` toml
-thumbnail_offset = "0px -200px"
+thumbnail_css_class = "banner"
 ```
 
 Produces this CSS:
 
 ``` css
-style="background-position: 0px -200px; ..."
+class="post-banner banner"...
 ```
 
-See [background-position CSS](https://www.w3schools.com/cssref/pr_background-position.asp) for more information.
+If this is note set then the class will simply be:
 
-### thumbnail_caption 
+``` css
+class="post-banner"...
+```
+
+### thumbnail_caption
 
 This is for a caption to be displayed under your thumbnail image on the main post page. Note it does not show on the list page that your post shows on, only on the single post page. I primarily use this for giving attribution to image owners but can be used for any text or HTML.
 

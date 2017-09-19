@@ -2,6 +2,9 @@
 
 Changes only recorded from v0.50
 
+# 0.58
+* Removed frontmatter `thumbnail_offset` and replaced with `thumbnail_css_class` to allow you to apply individual CSS to page banners. If this is not set then the default `post-banner` CSS class will be applied;
+
 # 0.57
 * Added new shortcode - mva - allows Microsoft Virtual Academy videos to be embedded. Video will expand to the size of the current div it is in;
 * Added ability to adjust the offset of the background image that is shown on a page;
