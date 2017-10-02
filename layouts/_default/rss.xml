@@ -23,6 +23,7 @@
           {{ else }}
             <description>{{ .Summary | html }}</description>
           {{ end }}
+          <category>{{ range .Params.tags }}{{ upper . }} {{ end }}</category>
         </item>
       {{ end }}
     {{ end }}
