@@ -4,6 +4,9 @@ Changes only recorded from v0.50
 
 # 0.58
 * Removed frontmatter `thumbnail_offset` and replaced with `thumbnail_css_class` to allow you to apply individual CSS to page banners. If this is not set then the default `post-banner` CSS class will be applied;
+* Header image caption is now on image itself - bottom right;
+* Added categories to RSS.xml;
+* Some fonts dont; appear in bold when using `<bold>` or `<strong>` - added CSS to give these HTML tags the correct weight;
 
 # 0.57
 * Added new shortcode - mva - allows Microsoft Virtual Academy videos to be embedded. Video will expand to the size of the current div it is in;
