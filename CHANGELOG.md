@@ -2,6 +2,9 @@
 
 Changes only recorded from v0.50
 
+# 0.59
+* Added support for thumbnail_hide_list - hides the thumbnail from displaying on list pages;
+
 # 0.58
 * Removed frontmatter `thumbnail_offset` and replaced with `thumbnail_css_class` to allow you to apply individual CSS to page banners. If this is not set then the default `post-banner` CSS class will be applied;
 * Header image caption is now on image itself - bottom right;

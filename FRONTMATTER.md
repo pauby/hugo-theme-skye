@@ -19,6 +19,7 @@ hide_rss = true
 thumbnail = "/images/banner-image.jpg"
 thumbnail_css_class = "banner"
 thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
+thumbnail_hide_list = true
 
 categories = [ "Interesting", "Chocolate" ]
 tags = [ "interesting", "chocolate" ]
@@ -166,6 +167,14 @@ thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos
 
 ``` toml
 thumbnail_caption = "This is my lovely lovely horse!"
+```
+
+### thumbnail_hide_list
+
+This allows the page thumbnail to be hidden from list pages.
+
+``` toml
+thumbnail_hide_list = true
 ```
 
 ### title
