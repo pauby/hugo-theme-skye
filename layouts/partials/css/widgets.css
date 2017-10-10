@@ -46,11 +46,15 @@
   flex-wrap: nowrap;
 }
 
-.memberbox .top-border {
+#authorbox .top-border {
   border-top: 1px solid {{ .Get "alt_body_text" }};
 }
 
-.memberbox img {
+#authorbox .padding-bottom {
+  margin-bottom: 3rem; 
+}
+
+#authorbox img {
   border: 3px solid {{ .Get "alt_body_text" }};
 }
 

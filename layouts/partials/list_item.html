@@ -14,7 +14,7 @@
     </header>
   </div>
   <div style="height: auto; overflow: auto">
-  {{ if .Params.thumbnail }}
+  {{ if and (.Params.thumbnail) (not .Params.thumbnail_hide_list) }}
     <div class="post-list-thumbnail">
     <figure>
       <a href="{{ .Permalink }}">

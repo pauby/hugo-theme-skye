@@ -10,15 +10,19 @@ title = "My lovely post"
 description = "A description that is shown as a summary on a list page."
 date = "2017-07-04T18:44:41+01:00"
 
-twitter_description = "Don't you just love #Hugo?" 
+author = "Paul Broadwith"
+authorbox_top = true
+hide_authorbox = false
+
+short_description = "Don't you just love #Hugo?" 
 
 disable_comments = false
 draft = false
-hide_authorbox = false
 hide_rss = true
 thumbnail = "/images/banner-image.jpg"
 thumbnail_css_class = "banner"
 thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
+thumbnail_hide_list = true
 
 categories = [ "Interesting", "Chocolate" ]
 tags = [ "interesting", "chocolate" ]
@@ -32,8 +36,22 @@ name = "sharing:reddit"
 content = "/r/hugo"
 
 +++
+
+### author
+
+Name of the author for this article. Note that this must match the name field of a data file in `data/members` (note the name of the data file does not have to match only the name field within it).
+
+```toml
+author = "Paul Broadwith" 
 ```
 
+### authorbox_top
+
+Forces the authorbox to be displayed at the top of the article and not the bottom.
+
+```toml
+authorbox_top = true
+```
 ### categories
 
 This is the [standard Hugo front matter][hugo-front-matter-docs] post taxonomies, in this case the post categories.
@@ -166,6 +184,14 @@ thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos
 
 ``` toml
 thumbnail_caption = "This is my lovely lovely horse!"
+```
+
+### thumbnail_hide_list
+
+This allows the page thumbnail to be hidden from list pages.
+
+``` toml
+thumbnail_hide_list = true
 ```
 
 ### title
