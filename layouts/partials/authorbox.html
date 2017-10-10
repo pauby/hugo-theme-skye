@@ -14,6 +14,7 @@
 			<div>
 				<span class="authorname">About {{ .name }}</span>
         <span style="float: right" class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+          {{ with .website }}<a href="{{ . }}"><i class="fa fa-home fa-fw" aria-hidden="true"></i></a>{{ end }}
           {{ with .deviantart }}<a href="https://{{ . }}.deviantart.com"><i class="fa fa-deviantart fa-fw" aria-hidden="true"></i></a>{{ end }}
           {{ with .facebook }}<a href="https://facebook.com/{{ . }}"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>{{ end }}
           {{ with .github }}<a href="https://github.com/{{ . }}"><i class="fa fa-github fa-fw" aria-hidden="true"></i></a>{{ end }}
