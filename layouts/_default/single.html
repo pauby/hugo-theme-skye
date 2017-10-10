@@ -33,6 +33,9 @@
   			</p>
   			{{ end }}
       </header>
+      {{ if or (.Site.Params.authorbox_top) (.Params.authorbox_top) }}
+        {{ partial "authorbox.html" . }}
+      {{ end }}
       <div id="post-content">
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
         {{ .Content }}
@@ -40,8 +43,10 @@
         {{ partial "sharing.html" . }}
   		</div>
     </article>
-    {{ partial "authorbox.html" . }}
-  	{{ partial "post_nav.html" . }}
+    {{ if and (not .Site.Params.authorbox_top) (not .Params.authorbox_top) }}
+      {{ partial "authorbox.html" . }}
+    {{ end }}
+      {{ partial "post_nav.html" . }}
   	{{ partial "comments.html" . }}
   </main>
 {{ partial "footer.html" . }}

@@ -2,40 +2,42 @@
 
 {{ range $.Site.Data.members }}
 	{{ if or (and (and (isset $.Site.Params "author") (not (isset $.Params "author"))) (eq .name $.Site.Params.author )) (and (isset $.Params "author") (eq .name $.Params.author)) }}
-  {{ if (not .Params.disable_sharing) }}
-  <div id="authorbox" class="row vcenter memberbox">
+  <div id="authorbox">
+  {{ if or ($.Params.disable_sharing) ($.Site.Params.authorbox_top_) ($.Params.authorbox_top) }}
+    <div class="row vcenter memberbox top-border padding-bottom">
   {{ else }}
-  <div id="authorbox" class="row vcenter memberbox top-border">
+    <div class="row vcenter memberbox">
   {{ end }}
-		<div class="row-item member-avatar">
-				<img alt="{{ .name }} avatar" src="{{ with .img }}{{ . | relURL }}{{ else }}{{ "images/profile.jpg" | absURL }}{{ end }}" height="90" width="90">
-		</div>
-		<div class="row-item member-bio">
-			<div>
-				<span class="authorname">About {{ .name }}</span>
-        <span style="float: right" class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
-          {{ with .website }}<a href="{{ . }}"><i class="fa fa-home fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .deviantart }}<a href="https://{{ . }}.deviantart.com"><i class="fa fa-deviantart fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .facebook }}<a href="https://facebook.com/{{ . }}"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .github }}<a href="https://github.com/{{ . }}"><i class="fa fa-github fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .googleplus }}<a href="https://plus.google.com/{{ . }}"><i class="fa fa-google-plus-official fa-fw"  aria-hidden="true"></i></a>{{ end }}
-          {{ with .instagram }}<a href="https://instagram.com/{{ . }}"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .linkedin }}<a href="https://linkedin.com/in/{{ . }}"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .meetup }}<a href="https://www.meetup.com/{{ . }}"><i class="fa fa-meetup fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .pinterest }}<a href="https://pinterest.com/{{ . }}"><i class="fa fa-pinterest-p fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .reddit }}<a href="https://www.reddit.com/user/{{ . }}"><i class="fa fa-reddit fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .spotify }}<a href="https://open.spotify.com/user/{{ . }}"><i class="fa fa-spotify fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .steam }}<a href="https://steamcommunity.com/{{ . }}"><i class="fa fa-steam fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .tumblr }}<a href="https://{{ . }}.tumblr.com/"><i class="fa fa-tumblr fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .twitter }}<a href="https://twitter.com/{{ . }}"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a>{{ end }}
-          {{ with .youtube }}<a href="https://www.youtube.com/user/{{ . }}"><i class="fa fa-youtube fa-fw" aria-hidden="true"></i></a>{{ end }}
-        </span>
-			</div>
-			<p>
-				{{ .bio }}
-			</p>
-		</div>
-	</div>
+  		<div class="row-item member-avatar">
+	  			<img alt="{{ .name }} avatar" src="{{ with .img }}{{ . | relURL }}{{ else }}{{ "images/profile.jpg" | absURL }}{{ end }}" height="90" width="90">
+		  </div>
+		  <div class="row-item member-bio">
+			  <div>
+				  <span class="authorname">{{ .name }}</span>
+          <span style="float: right" class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+            {{ with .website }}<a href="{{ . }}"><i class="fa fa-home fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .deviantart }}<a href="https://{{ . }}.deviantart.com"><i class="fa fa-deviantart fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .facebook }}<a href="https://facebook.com/{{ . }}"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .github }}<a href="https://github.com/{{ . }}"><i class="fa fa-github fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .googleplus }}<a href="https://plus.google.com/{{ . }}"><i class="fa fa-google-plus-official fa-fw"  aria-hidden="true"></i></a>{{ end }}
+            {{ with .instagram }}<a href="https://instagram.com/{{ . }}"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .linkedin }}<a href="https://linkedin.com/in/{{ . }}"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .meetup }}<a href="https://www.meetup.com/{{ . }}"><i class="fa fa-meetup fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .pinterest }}<a href="https://pinterest.com/{{ . }}"><i class="fa fa-pinterest-p fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .reddit }}<a href="https://www.reddit.com/user/{{ . }}"><i class="fa fa-reddit fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .spotify }}<a href="https://open.spotify.com/user/{{ . }}"><i class="fa fa-spotify fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .steam }}<a href="https://steamcommunity.com/{{ . }}"><i class="fa fa-steam fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .tumblr }}<a href="https://{{ . }}.tumblr.com/"><i class="fa fa-tumblr fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .twitter }}<a href="https://twitter.com/{{ . }}"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a>{{ end }}
+            {{ with .youtube }}<a href="https://www.youtube.com/user/{{ . }}"><i class="fa fa-youtube fa-fw" aria-hidden="true"></i></a>{{ end }}
+          </span>
+	  		</div>
+		  	<p>
+			  	{{ .bio }}
+			  </p>
+		  </div>
+    </div>
+  </div>
 	{{ end }}
 {{ end }}
 {{ end }}

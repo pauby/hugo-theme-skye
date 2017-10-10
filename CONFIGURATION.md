@@ -58,6 +58,14 @@ to the same value as `name` in a data file. As long as authorboxes are enabled f
 author = "Luke Skyewalker"
 ```
 
+### authorbox_top
+
+Forces the authorbox to be displayed at the top of the article and not the bottom.
+
+```toml
+authorbox_top = true
+```
+
 ### post_navigation
 
 This variable control whether navigation to previous / next posts will be displayed at the bottom of the current post. To turn on, set to `true` and to turn off set to `false`.

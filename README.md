@@ -59,6 +59,7 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     description = "Here is a description of my site that will appear in search engine results - W00t!" # Description of your site
     cover = "/images/cover.jpg"
     authorbox = true
+    authorbox_top = true
     author = "Some Guy" # Name must exist in an entry in /data/members
     post_navigation = false
     # HashOver requires PHP running on the server
