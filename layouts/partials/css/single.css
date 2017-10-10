@@ -30,7 +30,7 @@ li img {
 
 #page-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 #page-header #post-metadata {
@@ -115,5 +115,6 @@ table tbody tr {
 
 #post-article {
     font-family: {{ .Get "post_text_font" }};
+    font-weight: 400;
 }
 
