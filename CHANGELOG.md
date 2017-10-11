@@ -2,6 +2,10 @@
 
 Changes only recorded from v0.50
 
+# 0.59.1
+
+* In v0.53 `sharing_tweet` was renamed `short_description` however this was not being used in the `twitter:description` metadata. Fixed this bug.
+
 # 0.59
 * Added support for thumbnail_hide_list - hides the thumbnail from displaying on list pages;
 * Added website to authorbox;
