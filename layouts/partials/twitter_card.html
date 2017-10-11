@@ -7,7 +7,7 @@
         {{ else }}
             <meta name="twitter:card" content="summary" />
         {{ end }}
-        {{ with .Params.twitter_description }}
+        {{ with .Params.short_description }}
             <meta name="twitter:description" content="{{ . }}" />
         {{ else }}
             <meta name="twitter:description" content="{{ .Description }}" /> 

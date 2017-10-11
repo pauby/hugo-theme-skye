@@ -136,7 +136,16 @@ Will result in the following metadata in the <head> of the site:
 
 ### sharing_tweet
 
-Renamed in v0.53 to [twitter_description][#twitter_description].
+Renamed in v0.53 to [short_description][#short_description].
+
+### short_description
+
+This is what will be used in the twitter:description of your [Twitter card][twitter-card-summary] and will be used if your post is shared using the sharing button. If this field is not present then the [description][#description] will be used instead. Was previously called [sharing_tweet][#sharing_tweet].
+
+``` toml
+short_description = "Don't you just love #Hugo?"
+```
+
 
 ### tags
 
@@ -200,14 +209,6 @@ This is the [standard Hugo front matter][hugo-front-matter-docs] title for the p
 
 ``` toml
 title = "My lovely horse"
-```
-
-### twitter_description
-
-This is what will be used in the twitter:description of your [Twitter card][twitter-card-summary] and will be used if your post is shared using the sharing button. If this field is not present then the [description][#description] will be used instead. Was previously called [sharing_tweet][#sharing_tweet.]
-
-``` toml
-twitter_description = "Don't you just love #Hugo?"
 ```
 
 [hugo-cli-docs]: https://gohugo.io/overview/usage/ "Using Hugo"
