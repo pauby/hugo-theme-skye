@@ -4,11 +4,6 @@
 
 A dark theme with blue accents for Hugo. Provides multiple configuration options and overrides.
 
-This theme is a fork of [BluestNight](https://gitlab.com/Shadow53/BluestNight) and is a work in progress.
-
-## Example sites
-The BluestNight theme can be seen in action with its custom color scheme [here](https://mnbryant.com) or with an override [here](https://shadow53.com)
-
 ## Features
 
 You can find more details on certain features by scrolling down past this list
