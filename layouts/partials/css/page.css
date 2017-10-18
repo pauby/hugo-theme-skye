@@ -89,7 +89,6 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 }
 
 code {
-  color: {{ .Get "body_text" }};
   font-weight: bold;
   overflow-wrap: break-word;
 }
