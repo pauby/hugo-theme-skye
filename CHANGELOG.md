@@ -2,6 +2,9 @@
 
 Changes only recorded from v0.50
 
+# 0.60
+* Replaced configuration names:
+ * thumbnail_css_class => thumbnailCssClass
 # 0.59.1
 
 * In v0.53 `sharing_tweet` was renamed `short_description` however this was not being used in the `twitter:description` metadata. Fixed this bug.
