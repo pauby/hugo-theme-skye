@@ -33,6 +33,5 @@
 {{ partial "css/single.css" $.Scratch }}
 {{ partial "css/list.css" $.Scratch }}
 {{ partial "css/widgets.css" $.Scratch }}
-{{ if ($.Site.Params.hashover) }}{{ partial "css/hashover.css" $.Scratch }}{{ end }}
 {{ partial "css/print.css" $.Scratch }}
 {{ partial "css/sharing.css" $.Scratch }}

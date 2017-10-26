@@ -82,14 +82,6 @@ This variable control whether navigation to previous / next posts will be displa
 postNavigation = false
 ```
 
-### hashover
-
-Controls whether the site uses [Hashover](http://tildehash.com/?page=hashover) commenting system or not. To turn it on, set to `true` and the Hashover CSS and code will be included on the site. If you are using a different commenting system or don't want to use comments on your posts set this to `false`.
-
-``` toml
-hashover = false
-```
-
 ### RSSLink
 
 The URL for your site RSS feed.
