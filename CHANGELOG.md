@@ -3,9 +3,53 @@
 Changes only recorded from v0.50
 
 # 0.60
+
 * Stopped processing of the post title and description for opengraph, twitter card and RSS feed XML;
-* Replaced configuration names:
- * thumbnail_css_class => thumbnailCssClass
+
+* Replaced configuration names in frontmatter:
+  | Before | After |
+  |--------|-------|
+  | thumbnail_css_class | thumbnailCssClass |
+  | thumbnail_hide_list | thumbnailHideList |
+  | thumbnail_caption | thumbnailCaption |
+  | authorbox_top | authorboxTop |
+  | hide_authorbox | authorboxHide |
+  | short_description | descriptionShort |
+  | disable_comments |commentsDisable |
+
+* Replaced configuration names in site config:
+  | Before | After |
+  | ------ | ----- |
+  | hide_rss | rssHide |
+  | post_navigation | postNavigation |
+  | rss_disable_summary | rssDisableSummary |
+  | custom_css | cssAddHead |
+  | custom_js_head | jsAddHead |
+  | custom_js_foot | jsAddFoot |
+  | fontawesome_cdn_embedcode | fontawesomeCdnEmbedcode |
+  | Params.Fonts.code_font | Params.Fonts.code |
+  | Params.Fonts.default_font | Params.Fonts.default |
+  | Params.Fonts.googlefonts | Params.Fonts.loadGoogleFont |
+  | Params.Fonts.post_header_font | Params.Fonts.postHeader |
+  | Params.Fonts.post_text_font | Params.Fonts.postText |
+  | Params.Background.src | Params.BackgroundImage.url |
+  | Params.Background.fit_width | Params.BackgroundImage.fitWidth |
+  | Params.Background.tile | Params.BackgroundImage.tile |
+  | Params.Color.page_background_color | Params.Color.backgroundPage |
+  | Params.Color.main_background_color | Params.Color.backgroundWindow |
+  | Params.Color.alt_background_color | Params.Color.backgroundAlt |
+  | Params.Color.body_text | Params.Color.textDefault |
+  | Params.Color.alt_body_text | Params.Color.textAlt |
+  | Params.Color.accent_color | Params.Color.accent |
+  | Params.Color.header_text | Params.Color.textHeader |
+  | Params.Widgets.recent_articles | Params.Widgets.articleRecent |
+  | Params.Widgets.tags_counter | Params.Widgets.tagCount |
+  | Params.Widgets.twitter_feed | Params.Widgets.twitterFeed |
+  | Params.Widgets.upcoming_events | Params.Widgets.eventUpcoming |
+
+* Moved Params.Footer.copyright into main Params sections and removed Params.Footer section;
+
+* Removed Hashover commenting system;
 
 # 0.59.1
 
