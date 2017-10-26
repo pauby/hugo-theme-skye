@@ -1,5 +1,5 @@
 +++
-hide_authorbox = true
-disable_comments = true
+authorboxHide = true
+commentsDisable = true
 draft = true
 +++

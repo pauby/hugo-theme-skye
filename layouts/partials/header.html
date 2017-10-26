@@ -49,12 +49,12 @@
     </script>
     {{end}}
 
-    {{ range .Site.Params.fonts.googlefonts }}
+    {{ range .Site.Params.fonts.loadGoogleFont }}
       <link rel="stylesheet" {{ printf "href=\"//fonts.googleapis.com/css?family=%s\"" . | safeHTMLAttr }} type="text/css" media="all" />
     {{ end }}
     {{ if ($.Site.Params.fontawesome) }}
-      {{ if ($.Site.Params.fontawesome_cdn_embedcode) }}
-        <script src="https://use.fontawesome.com/{{$.Site.Params.fontawesome_cdn_embedcode}}.js"></script>
+      {{ if ($.Site.Params.fontawesomeCdnEmbedcode) }}
+        <script src="https://use.fontawesome.com/{{$.Site.Params.fontawesomeCdnEmbedcode}}.js"></script>
       {{ else }}
         <link rel="stylesheet" href={{ "css/font-awesome.min.css" | absURL }}>
       {{ end }}
@@ -63,10 +63,10 @@
       <link rel="stylesheet" type="text/css" href={{ "hashover/comments.css" | absURL }}>
     {{ end }}
     <link rel="stylesheet" type="text/css" href={{ "styles.css" | absURL }}>
-    {{ range .Site.Params.custom_css }}
+    {{ range .Site.Params.cssAddHead }}
       <link rel="stylesheet" type="text/css" href="{{ . | absURL }}" />
     {{ end }}
-    {{ range .Site.Params.custom_js_head }}
+    {{ range .Site.Params.jsAddHead }}
       <script src="{{ . | absURL }}"></script>
     {{ end }}
     {{ partial "extra-in-head.html" . }}

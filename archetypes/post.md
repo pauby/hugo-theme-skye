@@ -5,16 +5,22 @@ publishDate = {{ .Date }}
 lastmod = {{ .Date }}
 
 description = ""
-keywords = ""
-short_description = ""
+descriptionShort = ""
+
+author = ""
+authorboxTop = false
+authorboxHide = false
+
 thumbnail = ""
-thumbnail_offset = "0px 0px"
-thumbnail_caption = ""
+thumbnailHideList = ""
+thumbnailCssClass = ""
+thumbnailCaption = ""
 
 draft = true
-hide_authorbox = false
-disable_comments = false
-hide_rss = false
+commentsDisable = false
+rssHide = false
+
+keywords = ""
 
 tags = [ "" ]
 categories = [ "" ]

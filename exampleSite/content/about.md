@@ -2,7 +2,7 @@
 title = "About Hugo"
 date = "2014-04-09"
 menu = "main"
-hide_authorbox = true
+authorboxHide = true
 weight = 1
 +++
 
