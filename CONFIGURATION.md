@@ -58,28 +58,28 @@ to the same value as `name` in a data file. As long as authorboxes are enabled f
 author = "Luke Skyewalker"
 ```
 
-### authorbox_top
+### authorboxTop
 
 Forces the authorbox to be displayed at the top of the article and not the bottom.
 
 ```toml
-authorbox_top = true
+authorboxTop = true
 ```
 
-### post_navigation
+### copyright
+
+Whatever text is in this configuration value is displayed in the footer. Normally used for site copyright text, hence the name. The text can include normal markdown.
+
+``` toml 
+copyright = "&copy; My awesome site 2017. Powered by Hugo."
+```
+
+### postNavigation
 
 This variable control whether navigation to previous / next posts will be displayed at the bottom of the current post. To turn on, set to `true` and to turn off set to `false`.
 
 ``` toml
-post_navigation = false
-```
-
-### hashover
-
-Controls whether the site uses [Hashover](http://tildehash.com/?page=hashover) commenting system or not. To turn it on, set to `true` and the Hashover CSS and code will be included on the site. If you are using a different commenting system or don't want to use comments on your posts set this to `false`.
-
-``` toml
-hashover = false
+postNavigation = false
 ```
 
 ### RSSLink
@@ -90,12 +90,12 @@ The URL for your site RSS feed.
 RSSLink = "http://feeds.specificfeeds.com/pauby"
 ```
 
-### rss_disable_summary
+### rssDisableSummary
 
 The theme comes with it's own RSS template which is a slightly modified version of [Hugo's embedded RSS template](https://gohugo.io/templates/rss/#the-embedded-rss-xml). The modification allows the page description, as specified in the [front matter](FRONTMATTER.md#description), to be used instead of the page summary. 
 
 ``` toml
-rss_disable_summary = true
+rssDisableSummary = true
 ```
 
 ### GoogleAnalyticsUserID
@@ -106,12 +106,12 @@ Enter your Google Analytics User ID here to allow site stats to be collected. If
 GoogleAnalyticsUserID = "AB-12345678-1"
 ```
 
-### custom_css
+### cssAddHead
 
 This array allows you to add CSS files your site without the need to edit any files. When creating the pages for your site each URL you place in here is wrapped in  `<link rel="stylesheet" type="text/css" href="...">` and included at the end of the `<head>` section of your page. For example, this variable:
 
 ``` toml
-custom_css = [ "/css/mystyles.css", "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css"]
+cssAddHead = [ "/css/mystyles.css", "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css"]
 ```
 
 Will result in this code within the `<head>` section of the page:
@@ -126,12 +126,12 @@ Will result in this code within the `<head>` section of the page:
 </head>
 ```
 
-### custom_js_head
+### jsAddHead
 
 This array allows you to add Javascript files your site without the need to edit any files. When creating the pages for your site each URL you place in here is wrapped in  `<script src="..." ></script>` and included at the end of the `<head>` section of your page. For example, this variable:
 
 ``` toml
-custom_js_head = [ "/js/myjavascript.js", "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"]
+jsAddHead = [ "/js/myjavascript.js", "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"]
 ```
 
 Will result in this code within the `<head>` section of the page:
@@ -146,12 +146,12 @@ Will result in this code within the `<head>` section of the page:
 </head>
 ```
 
-### custom_js_foot
+### jsAddFoot
 
 This array allows you to add Javascript files your site without the need to edit any files. When creating the pages for your site each URL you place in here is wrapped in  `<script src="..." ></script>` and included just before the `</body>` tag on your page. For example, this variable:
 
 ``` toml
-custom_js_foot = [ "/js/myjavascript.js", "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"]
+jsAddFoot = [ "/js/myjavascript.js", "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"]
 ```
 
 Will result in this code within just before the `</body>` tag on the page:
@@ -168,13 +168,13 @@ Will result in this code within just before the `</body>` tag on the page:
 
 Controls whether Font Awesome CSS is included in the page <head>.
 
-If this is true and [fontawesome_cdn_embedcode](#fontawesome_cdn_embedcode) is empty then as per the [Font Awesome Getting Started instructions](http://fontawesome.io/get-started/), the `css/font-awesome.min.css` is included from the head (make sure this file is placed in the correct location).
+If this is true and [fontawesomeCdnEmbedcode](#fontawesomeCdnEmbedcode) is empty then as per the [Font Awesome Getting Started instructions](http://fontawesome.io/get-started/), the `css/font-awesome.min.css` is included from the head (make sure this file is placed in the correct location).
 
-If this is true and [fontawesome_cdn_embedcode][#fontawesome_cdn_embedcode] is not an empty value, then as per the [Font Awesome Getting Started instructions](http://fontawesome.io/get-started/), the `<script src="https://use.fontawesome.com/<YOUR CDN EMBED CODE>.js"></script>` is included in the `<head>` section.
+If this is true and [fontawesomeCdnEmbedcode][#fontawesomeCdnEmbedcode] is not an empty value, then as per the [Font Awesome Getting Started instructions](http://fontawesome.io/get-started/), the `<script src="https://use.fontawesome.com/<YOUR CDN EMBED CODE>.js"></script>` is included in the `<head>` section.
 
 ``` toml
 fontawesome = true
-fontawesome_cdn_embedcode = "1234567890"
+fontawesomeCdnEmbedcode = "1234567890"
 ```
 
 Will result in the following HTML being aded to the `<head>`:
@@ -183,32 +183,22 @@ Will result in the following HTML being aded to the `<head>`:
 <script src="https://use.fontawesome.com/1234567890.js"></script>
 ```
 
-### fontawesome_cdn_embedcode
+### fontawesomeCdnEmbedcode
 
 This is your [Font Awesome CDN Embed Code](http://fontawesome.io/get-started/). If you prefer to use the local CSS on your site for this then remove this or leave the value blank.
 
 See [fontawesome](#fontawesome) for more information.
 
-## Configuration - [Params.Footer]
-
-### copyright
-
-Whatever text is in this configuration vakue is displayed in the footer. Normally used for site copyright text, hence the name. The text can include normal markdown.
-
-``` toml 
-copyright = "&copy; My awesome site 2017. Powered by Hugo."
-```
-
 ## Configuration - [Params.Fonts]
 
 This section is for configuration of the sites fonts.
 
-### code_font
+### code
 
 The font used for the code text on your site within `<pre>` or `<code>` blocks.
 
 ``` toml
-code_font = "Courier New"
+code = "Courier New"
 ```
 
 Produces this CSS code:
@@ -223,12 +213,12 @@ This will use the Courier New font for code text. Note that whatever you put her
 
 See the `index.css` for config variables and `reset.css` for the CSS.
 
-### default_font
+### default
 
 The font used for the site by default.
 
 ``` toml
-default_font = "Arial"
+default = "Arial"
 ```
 
 Produces this CSS code:
@@ -243,24 +233,24 @@ This will use the Arial font for all site text (without specific styling).
 
 See the `index.css` for config variables and `reset.css` for the CSS.
 
-### googlefonts
+### loadGoogleFont
 
 This controls the [Google Fonts](https://fonts.google.com/) that are loaded with your site.
 
 ``` toml
-googlefonts = [ "Bitter", "Source+Sans+Pro" ]
+loadGoogleFont = [ "Bitter", "Source+Sans+Pro" ]
 ```
 
 This will load the Bitter and Source Sans Pro fonts. Note that **any spaces in your font name must be replaced by +** or the font may not be loaded.
 
 See the `header.html` for the code.
 
-###	post_header_font
+###	postHeader
 
 The font used for the `h1` to `h6` headers on your site.
 
 ``` toml
-post_header_font = "Bitter, Source Sans Pro"
+postHeader = "Bitter, Source Sans Pro"
 ```
 
 Produces this CSS code:
@@ -275,12 +265,12 @@ This will use the Bitter, then the Source Sans Pro font for the `h` headers. Not
 
 See the `index.css` for config variables and `reset.css` for the CSS.
 
-###	post_text_font
+###	postText
 
 The font used for the normal text on your site. This font is set on the CSS for the `body {}`.
 
 ``` toml
-post_text_font = "Bitter, Source Sans Pro"
+postText = "Bitter, Source Sans Pro"
 ```
 
 Produces this CSS code:
@@ -295,11 +285,11 @@ This will use the Bitter, then the Source Sans Pro font for text. Note that what
 
 See the `index.css` for config variables and `reset.css` for the CSS.
 
-## Configuration - [Params.Background]
+## Configuration - [Params.BackgroundImage]
 
 This section allows your site to have a background image. If you do not tile the image, it gets anchored in the top-left corner of the window
 
-### src
+### url
 
 Url of the image displayed as the site background.
 
@@ -307,7 +297,7 @@ Url of the image displayed as the site background.
 src = "/images/background.jpg"
 ```
 
-### fit_width
+### fitWidth
 
 Shrink the image to fit the width of the window.
 
@@ -326,71 +316,70 @@ tile = false
 
 Change any or all of the page colors.
 
-### page_background_color
+### backgroundPage
 
 Fairly self-explanatory - color of the *page* background. This is different from the window background color as the page sits within the window.
 
 ```toml
-    page_background_color = "#000000"
+    backgroundPage = "#000000"
 ```
 
-### main_background_color
+### backgroundWindow
 
 Background color of the window (site container), where the background image sits. Note that the *page* sits inside this window, hence why you can have two different colors.
 
 ``` toml
-main_background_color = "#050505"
+backgroundWindow = "#050505"
 ```
 
-### alt_background_color
+### backgroundAlt
 
 Alternate background of site container, used on inactive buttons, alternating table rows, and `<code>` and `<pre>` elements (code fields).
 
 ``` toml
-alt_background_color = "#252525"
+backgroundAlt = "#252525"
 ```
 
-### body
-_text
+### textDefault
 
-The text color to correspond with main_background_color.
+The text color to correspond with backgroundWindow.
 
 ``` toml
-body_text = "#e2e2e2"
+textDefault = "#e2e2e2"
 ```
 
-### alt_body_text
+### textAlt
 
-The text color to correspond with alt_background_color.
+The text color to correspond with backgroundAlt.
 
 ``` toml
-    alt_body_text = "#e2e2e2"
+    textAlt = "#e2e2e2"
 ```
 
-### accent_color
+### accent
 
 Accent color, used for active buttons and links.
 
 ``` toml
-accent_color = "#2c8cef"
+accent = "#2c8cef"
 ```
 
-### header_text
+### textHeader
 
 Color of the site header text.
 
 ``` toml
-    header_text = "#e2e2e2"
+    textHeader = "#e2e2e2"
 ```
 
 ### Sidebar widgets [Params.widgets]
 
-### recent_articles
+### articleRecent
 
 Show the ten most recent posts under /post/.
 
 ``` toml
-recent_articles = true
+articleRecent = true
 ```
 
 ### categories
@@ -401,6 +390,16 @@ Show the top 5 categories in use on your site
 categories = true
 ```
 
+### eventUpcoming
+
+Number of upcoming events to show in the events widget.
+
+``` toml
+eventUpcoming = 5
+```
+
+This shows the first 5 upcoming events.
+
 ### tags
 
 Show the tags used on your site, ordered by most common
@@ -409,21 +408,21 @@ Show the tags used on your site, ordered by most common
 tags = true
 ```
 
-### tags_counter
+### tagCount
 
 Include a parenthetical count of how often a tag has been used.
 
 ``` toml
-tags_counter = false
+tagCount = false
 ```
 
-### twitter_feed
+### twitterFeed
 
 This adds your twitter timeline to the sidebar and shows the last tweets from your feed. For the timeline to appear you also need to have set [twitter](#twitter) under [Params.Social][#social-icons---paramssocial]. The number of tweets to be shown has to be > 0.
 
 ``` 
 # Show the last 3 tweets from my twitter feed
-twitter_feed = 3
+twitterFeed = 3
 ```
 
 ### patreon

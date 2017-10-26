@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
   {{ if .Params.thumbnail }}
   <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} );">
-  {{ if .Params.thumbnail_caption }}
-    <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
+  {{ if .Params.thumbnailCaption }}
+    <figcaption>{{ .Params.thumbnailCaption | safeHTML }}</figcaption>
   {{ end }}
   </figure>
   <div id="main-container" class="row" role="main">
@@ -33,7 +33,7 @@
   			</p>
   			{{ end }}
       </header>
-      {{ if or (.Site.Params.authorbox_top) (.Params.authorbox_top) }}
+      {{ if or (.Site.Params.authorboxTop) (.Params.authorboxTop) }}
         {{ partial "authorbox.html" . }}
       {{ end }}
       <div id="post-content">
@@ -43,7 +43,7 @@
         {{ partial "sharing.html" . }}
   		</div>
     </article>
-    {{ if and (not .Site.Params.authorbox_top) (not .Params.authorbox_top) }}
+    {{ if and (not .Site.Params.authorboxTop) (not .Params.authorboxTop) }}
       {{ partial "authorbox.html" . }}
     {{ end }}
       {{ partial "post_nav.html" . }}

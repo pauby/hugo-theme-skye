@@ -30,8 +30,7 @@ You can find more details on certain features by scrolling down past this list
 - Pagination
 - [Custom section landing pages](#custom-section-landing-pages)
 - Dynamic site menu that works on desktop and mobile alike - supports seemingly infinite nesting (might look bad on mobile, though)
-- Comments system based on [Hashover](http://tildehash.com/?page=hashover) (requires PHP on the hosting server)
-  - Comments can be enabled/disabled on a per-page basis as well as in the site config
+- Comments can be enabled/disabled on a per-page basis as well as in the site config
 - Dynamic taxonomy pages that look good on all screen sizes
 - Social icons in the page footer
 - Custom "Error 404" page
@@ -54,63 +53,60 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     description = "Here is a description of my site that will appear in search engine results - W00t!" # Description of your site
     cover = "/images/cover.jpg"
     authorbox = true
-    authorbox_top = true
+    authorboxTop = true
     author = "Some Guy" # Name must exist in an entry in /data/members
-    post_navigation = false
-    # HashOver requires PHP running on the server
-    # and cannot be hosted on a different domain
-    hashover = false
+    postNavigation = false
     RSSLink = "http://feeds.feedburner.com/yoursite.xml"
-    rss_disable_summary = true
+    rssDisableSummary = true
 
-    custom_css = ["/css/powershellconsole.css" ]
-    custom_js_head = [""]	# Javascript URL's to place inside <script src=> tags in the header
-    custom_js_foot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
+    cssAddHead = ["/css/powershellconsole.css" ]
+    jsAddHead = [""]	# Javascript URL's to place inside <script src=> tags in the header
+    jsAddFoot = [""] 	# Javascript URL's to place inside <script src=> tags in the footer
 
     fontawesome = true
-    fontawesome_cdn_embedcode = "1234567890"
+    fontawesomeCdnEmbedcode = "1234567890"
 
 [Params.Footer]
     copyright = "&copy; pauby.com 2017. Powered by Hugo."
 
 # Custom background for the site
-[Params.Background]
+[Params.BackgroundImage]
     src = "/path/to/background.png"
     fit_width = true
     tile = false
 
 [Params.fonts]
 
-    googlefonts = [ "Lato", "Libre Franklin" ] 
+    loadGoogleFont = [ "Lato", "Libre Franklin" ] 
 
-    default_font = "Lato"
-    post_header_font = "Libre Franklin, Arial"
-    post_text_font = "Libre Franklin, Arial"
-    code_font = "Courier New"
+    main = "Lato"
+    postHeader = "Libre Franklin, Arial"
+    postText = "Libre Franklin, Arial"
+    code = "Courier New"
 
 # These are the default colors used in the theme
 # Change them to whatever you'd like
 [Params.Color]
-    page_background_color = "#000000"
-    main_background_color = "#050505"
-    alt_background_color = "#252525"
-    body_text = "#e2e2e2"
-    alt_body_text = "#e2e2e2"
-    accent_color = "#2c8cef"
-    header_text = "#e2e2e2"
+    backgroundPage = "#000000"
+    backgroundWindow = "#050505"
+    backgroundAlt = "#252525"
+    textDefault = "#e2e2e2"
+    textAlt = "#e2e2e2"
+    accent = "#2c8cef"
+    textHeader = "#e2e2e2"
 
 [Params.Social]
     github = "username" # Your GitHub username
     facebook = "your_fb_id" # Your Facebook ID - the part that comes after https://facebook.com/ on your profile page
 
 [Params.Widgets]
-    recent_articles = true # Enable "Recent arcticles" widget
+    articleRecent = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
     patreon = "https://patreon.com/shadow53" # Enable "Patreon" widget
-    tags_counter = true # Enable tag count on tag widgets
+    tagCount = true # Enable tag count on tag widgets
     upcoming_events = false
-    my_twitter_feed = true
+    my_twitterFeed = true
 
 # This is required for CSS to work
 [outputs]
@@ -135,10 +131,10 @@ PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 ```
 
-If you are happy with the default appearance of the the Pygment Styles then use `PygmentsStyle` variable to your preferred [style](http://pygments.org/docs/styles/). Otherwise remove the variable and include your preferred CSS in the page `<head>`. See [custom_css](#/CONFIGURATION.md#custom_css).
+If you are happy with the default appearance of the the Pygment Styles then use `PygmentsStyle` variable to your preferred [style](http://pygments.org/docs/styles/). Otherwise remove the variable and include your preferred CSS in the page `<head>`. See [cssAddHead](#/CONFIGURATION.md#cssAddHead).
 
 ``` toml
 PygmentsUseClasses = true
 PygmentsCodeFences = true
-custom_css = ["/css/myHighlighter.css"]
+cssAddHead = ["/css/myHighlighter.css"]
 ```

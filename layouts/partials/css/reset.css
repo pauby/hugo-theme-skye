@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: {{ .Get "default_font" }}, sans-serif;
+  font-family: {{ .Get "font_default" }}, sans-serif;
 }
 p { margin-bottom: 1rem; }
 p, li { line-height: 1.5; }
@@ -56,7 +56,7 @@ h6 {
 
 h1,h2,h3,h4,h5,h6 {
   line-height: 1.1;
-  font-family: {{ .Get "post_header_font" }}, sans-serif;
+  font-family: {{ .Get "font_postHeader" }}, sans-serif;
 }
 
 h2,h3,h4,h5,h6 {
@@ -74,7 +74,7 @@ code {
 
 code, pre {
   max-width: 100%;
-  font-family: {{ .Get "code_font" }}, monospace !important;
+  font-family: {{ .Get "font_code" }}, monospace !important;
 }
 
 th, td {
@@ -85,9 +85,9 @@ th, td {
 blockquote {
   padding: 1rem 1rem 0 1rem;
   margin: 1rem 0 1rem 0;
-  border-top: 1px solid {{ .Get "body_text" }};
-  border-bottom: 1px solid {{ .Get "body_text" }};
-  color: {{ .Get "body_text" }};
+  border-top: 1px solid {{ .Get "color_textDefault" }};
+  border-bottom: 1px solid {{ .Get "color_textDefault" }};
+  color: {{ .Get "color_textDefault" }};
   font-weight: bold;
 }
 

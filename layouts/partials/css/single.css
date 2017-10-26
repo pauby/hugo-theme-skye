@@ -1,7 +1,7 @@
 /* Site main - single */
 
 #post-metadata a {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
 }
 
 #post-tags .menu {
@@ -67,34 +67,34 @@ li img {
 }
 
 #TableOfContents a {
-  color: {{ .Get "alt_body_text" }};
+  color: {{ .Get "textAlt" }};
 }
 
 /* Tables */
 
 table, table thead th, table tbody td {
-  border: 1px solid {{ .Get "body_text" }};
+  border: 1px solid {{ .Get "color_textDefault" }};
   border-collapse: collapse;
 }
 
 table thead th {
   background-color: {{ .Get "accent" }};
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
 }
 
 table thead th a, table thead th a:hover {
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
   text-decoration: underline;
 }
 
 table tbody tr {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   background-color: {{ .Get "main_bg" }};
 }
 
 /*table tbody tr:nth-child(even) {
   background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "alt_body_text" }};
+  color: {{ .Get "textAlt" }};
 }*/
 
 #post-content .thumbnail img {
@@ -109,12 +109,12 @@ table tbody tr {
 #post-article h4,
 #post-article h5,
 #post-article h6 {
-  font-family: {{ .Get "post_header_font" }};
+  font-family: {{ .Get "font_postHeader" }};
   text-align: center;
 }
 
 #post-article {
-    font-family: {{ .Get "post_text_font" }};
+    font-family: {{ .Get "font_postText" }};
     font-weight: 400;
 }
 

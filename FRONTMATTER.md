@@ -7,22 +7,25 @@ Below is an explanation of the front matter configuration options available.
 ``` toml
 +++
 title = "My lovely post"
-description = "A description that is shown as a summary on a list page."
 date = "2017-07-04T18:44:41+01:00"
+publishDate = "2017-07-04T18:44:41+01:00"
+lastmod = "2017-07-04T18:44:41+01:00"
+
+description = "A description that is shown as a summary on a list page."
+descriptionShort = "Don't you just love #Hugo?" 
 
 author = "Paul Broadwith"
-authorbox_top = true
-hide_authorbox = false
+authorboxTop = true
+authorboxHide = false
 
-short_description = "Don't you just love #Hugo?" 
-
-disable_comments = false
-draft = false
-hide_rss = true
 thumbnail = "/images/banner-image.jpg"
 thumbnailCssClass = "banner"
-thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
-thumbnail_hide_list = true
+thumbnailCaption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
+thumbnailHideList = true
+
+draft = false
+commentsDisable = false
+rssHide = true
 
 categories = [ "Interesting", "Chocolate" ]
 tags = [ "interesting", "chocolate" ]
@@ -45,13 +48,22 @@ Name of the author for this article. Note that this must match the name field of
 author = "Paul Broadwith" 
 ```
 
-### authorbox_top
+### authorboxTop
 
 Forces the authorbox to be displayed at the top of the article and not the bottom.
 
 ```toml
-authorbox_top = true
+authorboxTop = true
 ```
+
+### authorboxHide
+
+If this is true, the authorbox on this post is not shown. There is also a site wide [authorbox configuration][site-config-authorbox] that can be configured.
+
+``` toml
+authorboxHide = true
+```
+
 ### categories
 
 This is the [standard Hugo front matter][hugo-front-matter-docs] post taxonomies, in this case the post categories.
@@ -76,12 +88,12 @@ This is the [standard Hugo front matter][hugo-front-matter-docs] description of 
 description = "The loveliest horse in the whole universe. Ever. Yeah."
 ```
 
-### disable_comments
+### commentsDisable
 
-If true, this disables the showing of comments on the page or even the comment modules (Disqus, Hashover etc.).
+If true, this disables the showing of comments on the page or even the comment modules.
 
 ``` toml
-disable_comments = true
+commentsDisable = true
 ``` 
 
 ### draft
@@ -92,20 +104,12 @@ This is the [standard hugo front matter][hugo-front-matter-docs] draft status of
 draft = true
 ```
 
-### hide_authorbox
-
-If this is true, the authorbox on this post is not shown. There is also a site wide [authorbox configuration][site-config-authorbox] that can be configured.
-
-``` toml
-hide_authorbox = true
-```
-
-### hide_rss
+### rssHide
 
 This will hide the page from the rss feed so that it will not appear in there. You might create a contact 'thankyou' page which will appear in the feed as normal. Using this frontmatter variable will stop it appearing.
 
 ``` toml
-hide_rss = true
+rssHide = true
 ``` 
 
 ### metadata
@@ -136,14 +140,14 @@ Will result in the following metadata in the <head> of the site:
 
 ### sharing_tweet
 
-Renamed in v0.53 to [short_description][#short_description].
+Renamed in v0.53 to [descriptionShort][#descriptionShort].
 
-### short_description
+### descriptionShort
 
 This is what will be used in the twitter:description of your [Twitter card][twitter-card-summary] and will be used if your post is shared using the sharing button. If this field is not present then the [description][#description] will be used instead. Was previously called [sharing_tweet][#sharing_tweet].
 
 ``` toml
-short_description = "Don't you just love #Hugo?"
+descriptionShort = "Don't you just love #Hugo?"
 ```
 
 
@@ -183,24 +187,24 @@ If this is note set then the class will simply be:
 class="post-banner"...
 ```
 
-### thumbnail_caption
+### thumbnailCaption
 
 This is for a caption to be displayed under your thumbnail image on the main post page. Note it does not show on the list page that your post shows on, only on the single post page. I primarily use this for giving attribution to image owners but can be used for any text or HTML.
 
 ``` toml
-thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
+thumbnailCaption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
 ```
 
 ``` toml
-thumbnail_caption = "This is my lovely lovely horse!"
+thumbnailCaption = "This is my lovely lovely horse!"
 ```
 
-### thumbnail_hide_list
+### thumbnailHideList
 
 This allows the page thumbnail to be hidden from list pages.
 
 ``` toml
-thumbnail_hide_list = true
+thumbnailHideList = true
 ```
 
 ### title
