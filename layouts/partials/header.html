@@ -59,9 +59,6 @@
         <link rel="stylesheet" href={{ "css/font-awesome.min.css" | absURL }}>
       {{ end }}
     {{ end }}
-    {{ if ($.Site.Params.hashover) }}
-      <link rel="stylesheet" type="text/css" href={{ "hashover/comments.css" | absURL }}>
-    {{ end }}
     <link rel="stylesheet" type="text/css" href={{ "styles.css" | absURL }}>
     {{ range .Site.Params.cssAddHead }}
       <link rel="stylesheet" type="text/css" href="{{ . | absURL }}" />

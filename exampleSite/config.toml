@@ -17,9 +17,6 @@ PygmentsStyle = "monokai"
     authorbox = true
     author = "Some Guy" # Name must exist in an entry in /data/members
     postNavigation = false
-    # HashOver requires PHP running on the server
-    # and cannot be hosted on a different domain
-    hashover = false
 
 [Params.widgets]
     articleRecent = true # Enable "Recent arcticles" widget

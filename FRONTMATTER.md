@@ -90,7 +90,7 @@ description = "The loveliest horse in the whole universe. Ever. Yeah."
 
 ### commentsDisable
 
-If true, this disables the showing of comments on the page or even the comment modules (Disqus, Hashover etc.).
+If true, this disables the showing of comments on the page or even the comment modules.
 
 ``` toml
 commentsDisable = true

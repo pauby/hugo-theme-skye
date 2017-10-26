@@ -30,8 +30,7 @@ You can find more details on certain features by scrolling down past this list
 - Pagination
 - [Custom section landing pages](#custom-section-landing-pages)
 - Dynamic site menu that works on desktop and mobile alike - supports seemingly infinite nesting (might look bad on mobile, though)
-- Comments system based on [Hashover](http://tildehash.com/?page=hashover) (requires PHP on the hosting server)
-  - Comments can be enabled/disabled on a per-page basis as well as in the site config
+- Comments can be enabled/disabled on a per-page basis as well as in the site config
 - Dynamic taxonomy pages that look good on all screen sizes
 - Social icons in the page footer
 - Custom "Error 404" page
@@ -57,9 +56,6 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     authorboxTop = true
     author = "Some Guy" # Name must exist in an entry in /data/members
     postNavigation = false
-    # HashOver requires PHP running on the server
-    # and cannot be hosted on a different domain
-    hashover = false
     RSSLink = "http://feeds.feedburner.com/yoursite.xml"
     rssDisableSummary = true
 
