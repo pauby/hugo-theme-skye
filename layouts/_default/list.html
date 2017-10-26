@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
   {{ if .Params.thumbnail }}
-  <figure class="post-banner{{ with .Params.thumbnail_css_class }} {{ . }}{{ end }}" style="background-image: url( {{ .Params.thumbnail }} );">
+  <figure class="post-banner{{ with .Params.thumbnailCssClass }} {{ . }}{{ end }}" style="background-image: url( {{ .Params.thumbnail }} );">
   {{ if .Params.thumbnail_caption }}
     <figcaption>{{ .Params.thumbnail_caption | safeHTML }}</figcaption>
   {{ end }}

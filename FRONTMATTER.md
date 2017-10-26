@@ -20,7 +20,7 @@ disable_comments = false
 draft = false
 hide_rss = true
 thumbnail = "/images/banner-image.jpg"
-thumbnail_css_class = "banner"
+thumbnailCssClass = "banner"
 thumbnail_caption = 'Image is courtesy of <a href="https://www.flickr.com/photos/aniceflickrprofile" alt="A Nice Flickr Profile Page">A nice profile</a> used under <a href="https://creativecommons.org/licenses/by/2.0/" alt="Creative Commons Attribution 2.0 Generic (CC BY 2.0) licence">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a> licence.'
 thumbnail_hide_list = true
 
@@ -163,12 +163,12 @@ This image is used as the banner for your post. It is shown in the list pages co
 thumbnail = "/images/mylovelyhorse.jpg"
 ```
 
-### thumbnail_css_class
+### thumbnailCssClass
 
 The class to apply to this particular thumbnail image when displayed on the single post. Whatever is contained in this string is put into the `class` attribute.
 
 ``` toml
-thumbnail_css_class = "banner"
+thumbnailCssClass = "banner"
 ```
 
 Produces this CSS:
