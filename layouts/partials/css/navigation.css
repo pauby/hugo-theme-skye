@@ -23,12 +23,12 @@
 }
 
 #main-nav, #main-nav a {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
 }
 
 #main-nav .button:hover a, #main-nav a:hover,
 #main-nav .button.active a, #main-nav a.active {
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
 }
 
 #main-nav .is-dropdown-submenu {
@@ -38,7 +38,7 @@
 #menu-toggle {
   padding-left: 10px;
   background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "alt_body_text" }}
+  color: {{ .Get "textAlt" }}
 }
 
 .nav-arrow {

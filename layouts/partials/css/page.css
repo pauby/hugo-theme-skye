@@ -1,12 +1,12 @@
 /* Entire page */
 
 ::-moz-selection {
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
   background-color: {{ .Get "accent" }};
 }
 
 ::selection {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   background-color: {{ .Get "accent" }};
 }
 
@@ -21,7 +21,7 @@
 #site-container {
   margin: auto;
   background-color: {{ .Get "main_bg" }};
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   width: 100%;
 	margin: 0px auto;
 }
@@ -43,28 +43,28 @@ body {
 /* Site header */
 
 #site-header ::-moz-selection, .tag ::-moz-selection {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   background-color: {{ .Get "main_bg" }};
 }
 
 #site-header ::selection, .tag ::selection {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   background-color: {{ .Get "main_bg" }};
 }
 
 header a:hover, header a:active, header a:focus {
   text-decoration: underline;
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
 }
 
 header a:link, header a:visited, #site-header header a:hover, #site-header header a:active {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   text-decoration: none;
 }
 
 #site-header {
   background-color: {{ .Get "accent" }};
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
 }
 
 #site-header header {
@@ -74,7 +74,7 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 #site-title, #site-tagline {
   font-weight: bold;
   display:inline-block;
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
 }
 
 #site-title {
@@ -85,7 +85,7 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 #site-tagline {
   font-size: 1.2rem;
   padding-top: 0.5rem;
-  border-top: 1px solid {{ .Get "header_text" }};
+  border-top: 1px solid {{ .Get "textHeader" }};
 }
 
 code {
@@ -119,7 +119,7 @@ main a, main a:hover {
 }
 
 main header a:hover, main header a:active, main header a:focus {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
 }
 
 /* Sidebar */
@@ -129,7 +129,7 @@ aside {
 }
 
 aside a:link, aside a:visited {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   text-decoration: none;
 }
 
@@ -143,7 +143,7 @@ footer {
   padding: 0.5rem 1rem;
   background-color: {{ .Get "alt_bg" }};
   border-top: 3px solid #999999;
-  color: {{ .Get "alt_body_text" }};
+  color: {{ .Get "textAlt" }};
 }
 
 footer p {
@@ -151,12 +151,12 @@ footer p {
 }
 
 footer a {
-  color: {{ .Get "alt_body_text" }};
+  color: {{ .Get "textAlt" }};
   text-decoration: underline;
 }
 
 footer a:hover {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
 }
 
 #social-icons {
@@ -167,7 +167,7 @@ footer a:hover {
 #social-icons a:visited,
 #social-icons a:active,
 #social-icons a:focus {
-  color: {{ .Get "alt_body_text" }};
+  color: {{ .Get "textAlt" }};
   text-decoration: none;
 }
 

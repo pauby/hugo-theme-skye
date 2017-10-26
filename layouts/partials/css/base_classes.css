@@ -58,7 +58,7 @@
 
 .pagination:hover {
   background-color: {{ .Get "accent" }};
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
 }
 
 .button {
@@ -71,11 +71,11 @@
   padding: 0.5rem 1rem;
   display: inline-block;
   background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "alt_body_text" }} !important;
+  color: {{ .Get "textAlt" }} !important;
 }
 
 .button:hover, .button:focus, .button:active, .button.active {
   background-color: {{ .Get "accent" }};
-  color: {{ .Get "header_text" }};
+  color: {{ .Get "textHeader" }};
   cursor: pointer;
 }

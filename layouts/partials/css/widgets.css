@@ -6,7 +6,7 @@
 }
 
 .widget ul li {
-  border-bottom: 1px dotted {{ .Get "alt_body_text" }};
+  border-bottom: 1px dotted {{ .Get "textAlt" }};
   padding: 0.2rem;
   font-size: 1rem;
 }
@@ -25,7 +25,7 @@
 #authorbox #social-icons a:visited,
 #authorbox #social-icons a:active,
 #authorbox #social-icons a:focus {
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   text-decoration: none;
 }
 
@@ -40,14 +40,14 @@
 
 .memberbox {
   background-color: {{ .Get "main_bg" }};
-  color: {{ .Get "body_text" }};
+  color: {{ .Get "color_textDefault" }};
   padding: 1rem 0.7rem;
-  border-bottom: 1px solid {{ .Get "alt_body_text" }};
+  border-bottom: 1px solid {{ .Get "textAlt" }};
   flex-wrap: nowrap;
 }
 
 #authorbox .top-border {
-  border-top: 1px solid {{ .Get "alt_body_text" }};
+  border-top: 1px solid {{ .Get "textAlt" }};
 }
 
 #authorbox .padding-bottom {
@@ -55,7 +55,7 @@
 }
 
 #authorbox img {
-  border: 3px solid {{ .Get "alt_body_text" }};
+  border: 3px solid {{ .Get "textAlt" }};
 }
 
 .member-avatar {

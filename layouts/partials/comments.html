@@ -1,4 +1,4 @@
-{{ if and (isset .Site.Params "hashover") (or (not (isset .Params "disable_comments")) (not .Params.disable_comments)) }}
+{{ if and (isset .Site.Params "hashover") (or (not (isset .Params "commentsDisable")) (not .Params.commentsDisable)) }}
 <div class="post-comments">
   {{ if (.Site.Params.hashover) }}
     <div id="hashover"></div>

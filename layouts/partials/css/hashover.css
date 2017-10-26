@@ -1,7 +1,7 @@
 /* Hashover override (hashoverride?) */
 #hashover form div.cmtbox {
   background-color: {{ .Get "alt_bg" }} !important;
-  border-color: {{ .Get "body_text" }} !important;
+  border-color: {{ .Get "color_textDefault" }} !important;
   border-width: 0 !important;
   border-radius: 0 !important;
 }
@@ -29,22 +29,22 @@
 #hashover input.post_cmt:focus,
 #hashover form input.post_cmt {
   background-color: {{ .Get "accent" }} !important;
-  color: {{ .Get "header_text" }} !important;
+  color: {{ .Get "textHeader" }} !important;
 }
 
 #hashover .cmtdiv input.post_cmt:hover,
 #hashover form input.post_cmt:hover {
   background-color: {{ .Get "main_bg" }} !important;
-  color: {{ .Get "body_text" }} !important;
+  color: {{ .Get "color_textDefault" }} !important;
 }
 
 #hashover .cmtnote {
-  color: {{ .Get "body_text" }} !important;
+  color: {{ .Get "color_textDefault" }} !important;
 }
 
 #hashover .cmtbubble {
   background-color: {{ .Get "alt_bg" }} !important;
-  color: {{ .Get "body_text" }} !important;
+  color: {{ .Get "color_textDefault" }} !important;
   border-style: none !important;
   border-radius: 0 !important;
 }
@@ -62,7 +62,7 @@
 #hashover .cmtdiv input.delete[type="submit"],
 #hashover .cmtdiv .optionbuttons a,
 #hashover .cmtdiv label {
-  background: {{ .Get "body_text" }} !important;
+  background: {{ .Get "color_textDefault" }} !important;
   color: {{ .Get "main_bg" }} !important;
 }
 

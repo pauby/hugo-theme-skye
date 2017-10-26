@@ -16,22 +16,22 @@ PygmentsStyle = "monokai"
     description = "Here is a description of my site that will appear in search engine results - W00t!" # Description of your site
     authorbox = true
     author = "Some Guy" # Name must exist in an entry in /data/members
-    post_navigation = false
+    postNavigation = false
     # HashOver requires PHP running on the server
     # and cannot be hosted on a different domain
     hashover = false
 
 [Params.widgets]
-    recent_articles = true # Enable "Recent arcticles" widget
+    articleRecent = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
-    tags_counter = true # Enable tag count on tag widgets
+    tagCount = true # Enable tag count on tag widgets
 
 [Params.color]
-    page_background_color = "#000000"
-    main_background_color = "#050505"
-    alt_background_color = "#252525"
-    body_text = "#e2e2e2"
-    alt_body_text = "#e2e2e2"
-    accent_color = "#2c8cef"
-    header_text = "#e2e2e2"
+    backgroundPage = "#000000"
+    backgroundWindow = "#050505"
+    backgroundAlt = "#252525"
+    textDefault = "#e2e2e2"
+    textAlt = "#e2e2e2"
+    accent = "#2c8cef"
+    textHeader = "#e2e2e2"
