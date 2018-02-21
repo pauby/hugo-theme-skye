@@ -155,7 +155,7 @@ footer a {
 }
 
 footer a:hover {
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "accent" }};
 }
 
 #social-icons {
