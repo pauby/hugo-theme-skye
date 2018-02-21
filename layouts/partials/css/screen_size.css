@@ -152,6 +152,7 @@
     width: auto;
     max-width: 20rem;
     margin: 0;
+    padding-left: 0;  /* Firefox adds padding-left: 40px - this overrides it */
   }
 
   #main-nav > ul > li > label:hover .nav-arrow {
