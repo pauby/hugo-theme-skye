@@ -1,7 +1,7 @@
 {{ if (not .Params.disable_sharing) }}
     <div id="sharing" class="share-box">
         <p>Share <span class="article-title">'{{ .Title }}'</span>:</p>
-        {{ range (split (delimit .Site.Params.Social.sharing "," | lower) ",") }}
+        {{ range .Site.Params.Social.sharing }}
              {{ if eq . "email" }}
                 <a href="mailto:?subject=Wanted to share this - {{ $.Title }}&amp;body={{ $.Params.Description }} - {{ $.Permalink }}" class="share-btn email">                
                     <i class="fa fa-envelope" aria-hidden="true"></i>

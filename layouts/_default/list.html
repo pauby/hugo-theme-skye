@@ -18,7 +18,7 @@
 		</header>
 		{{ end }}
     {{ .Content }}
-    {{ if (or (not (isset .Params "hide_list")) (not .Params.hide_list)) }}
+    {{ if (or (not (isset .Params "listHide")) (not .Params.listHide)) }}
       {{ if .IsHome }}
         {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
         {{ range $paginator.Pages }}
