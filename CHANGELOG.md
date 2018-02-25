@@ -2,6 +2,9 @@
 
 Changes only recorded from v0.50
 
+# 0.60.1
+
+* Replaced configuration name `hide_list` with `listHide`;
 # 0.60
 
 * Stopped processing of the post title and description for opengraph, twitter card and RSS feed XML;

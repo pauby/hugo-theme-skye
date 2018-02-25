@@ -15,7 +15,7 @@
 		</header>
 		{{ end }}
     {{ .Content }}
-    {{ if (or (not (isset .Params "hide_list")) (not .Params.hide_list)) }}
+    {{ if (or (not (isset .Params "listHide")) (not .Params.listHide)) }}
   		{{ range .Paginator.Pages }}
   		  {{ partial "list_item.html" . }}
   		{{ end }}
