@@ -16,21 +16,30 @@
       <header id="page-header">
         <h1>{{ .Title }}</h1>
         {{ if or (not .Date.IsZero) (.Params.categories) }}
-  			<p id="post-metadata" class="row">
+            <div class="metadata">
           {{ if not .Date.IsZero }}
-    				<i class="fa fa-clock-o fa-fw"></i>
-    				<time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}</time>
-  				{{ end }}
+            <i class="fa fa-clock-o fa-fw"></i>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}</time>
+  	      {{ end }}
 <!--  				{{ if .Params.categories }}
   				<span class="row-item">
   					<i class="fi-folder"></i>
   					{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "categories/" | absLangURL }}{{ . | urlize | lower }}" rel="category">{{ . }}</a>{{ end }}
           </span>
-  				{{ end }}-->
-          {{ if not .Params.hide_readingtime }}
-          <i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes
+                  {{ end }}-->
+          {{ if isset .Params "readingtimehide" }}
+            {{ if not .Params.readingtimehide }}
+                <span id="reading-time"></i><i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes</span>
+            {{ end }}
+          {{ else if and (isset .Site.Params "readingtimehide") (not .Site.Params.readingtimehide) }}
+                <span id="reading-time"></i><i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes</span>
           {{ end }}
-  			</p>
+          {{ range .Params.tags }}
+          <i class="fa fa-tag fa-fw"></i>
+          <a href="{{ " tags/ " | relLangURL }}{{ . | urlize }}/" rel="tag">{{ upper . }}</a>
+          </li>
+          {{ end }}
+        </div>
   			{{ end }}
       </header>
       {{ if or (.Site.Params.authorboxTop) (.Params.authorboxTop) }}
