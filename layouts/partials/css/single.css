@@ -30,11 +30,11 @@ li img {
 
 #page-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #page-header #post-metadata {
-  justify-content: center;
+  justify-content: left;
 }
 
 #post-metadata time {
@@ -110,7 +110,7 @@ table tbody tr {
 #post-article h5,
 #post-article h6 {
   font-family: {{ .Get "font_postHeader" }};
-  text-align: center;
+  text-align: left;
 }
 
 #post-article {
