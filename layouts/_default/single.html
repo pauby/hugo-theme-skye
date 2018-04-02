@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
   {{ if .Params.thumbnail }}
-  <figure class="post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} );">
+  <figure class="small-post-banner medium-post-banner large-post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} );">
   {{ if .Params.thumbnailCaption }}
     <figcaption>{{ .Params.thumbnailCaption | safeHTML }}</figcaption>
   {{ end }}
@@ -11,7 +11,7 @@
   {{ end }}
   {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
 
-  <main class="row-item small-full medium-two-thirds large-three-quarters">
+  <main class="row-item small-full medium-two-thirds large-three-quarters" style="padding-left: 0;">
     <article id="post-article">
       <header id="page-header">
         <h1>{{ .Title }}</h1>
