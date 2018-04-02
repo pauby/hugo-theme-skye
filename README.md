@@ -65,6 +65,8 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     fontawesome = true
     fontawesomeCdnEmbedcode = "1234567890"
 
+    readingtimeHide = true
+
 [Params.Footer]
     copyright = "&copy; pauby.com 2017. Powered by Hugo."
 

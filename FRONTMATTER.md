@@ -27,6 +27,7 @@ draft = false
 commentsDisable = false
 rssHide = true
 listHide = true
+readingtimeHide = true
 
 categories = [ "Interesting", "Chocolate" ]
 tags = [ "interesting", "chocolate" ]
@@ -118,6 +119,13 @@ Used in the _index.md for a section it will not list any other posts within the 
 
 ``` toml
 listHide = true
+```
+
+### readingtimeHide
+This hides the 'Estimated reading time' for an individual post. Note that this overrides the same configuration variable in the site config.
+
+``` toml
+readingtimeHide = true
 ```
 
 ### metadata

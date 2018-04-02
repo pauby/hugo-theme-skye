@@ -189,6 +189,13 @@ This is your [Font Awesome CDN Embed Code](http://fontawesome.io/get-started/). 
 
 See [fontawesome](#fontawesome) for more information.
 
+### readingtimeHide
+This hides the 'Estimated reading time' for an individual post. Note that this can be overriden on a post basis using the same configuration variable name in the frontmatter.)
+
+``` toml
+readingtimeHide = true
+```
+
 ## Configuration - [Params.Fonts]
 
 This section is for configuration of the sites fonts.
