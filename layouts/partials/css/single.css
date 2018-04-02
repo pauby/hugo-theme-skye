@@ -109,6 +109,10 @@ table tbody tr {
   margin-right: auto
 }
 
+#post-content ul {
+    margin-bottom: 0rem;
+}
+
 #post-article h1, 
 #post-article h2,
 #post-article h3,
