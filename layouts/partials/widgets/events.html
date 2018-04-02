@@ -1,5 +1,5 @@
 
-{{ if .Site.Params.widgets.upcoming_events }}
+{{ if .Site.Params.widgets.eventUpcoming }}
 <div class="widget">
 	<header>
 		<h4><i class="fa fa-calendar fa-fw"></i> Upcoming Events</h4>
@@ -8,7 +8,7 @@
 	<ul>
 		{{ $.Scratch.Set "count" 0 }}
 		{{ range sort $.Site.Data.events "startDatetime" "asc" }}
-			{{ if and (ge (time .endDatetime).Unix (time now).Unix) (lt ($.Scratch.Get "count") $.Site.Params.widgets.upcoming_events) }}
+			{{ if and (ge (time .endDatetime).Unix (time now).Unix) (lt ($.Scratch.Get "count") $.Site.Params.widgets.eventUpcoming) }}
 			{{ $.Scratch.Set "count" (add ($.Scratch.Get "count") 1) }}
 			<li itemscope itemtype="http://schema.org/Event">
 				{{ if .url }}
