@@ -26,6 +26,7 @@ thumbnailHideList = true
 draft = false
 commentsDisable = false
 rssHide = true
+listHide = true
 
 categories = [ "Interesting", "Chocolate" ]
 tags = [ "interesting", "chocolate" ]
@@ -111,6 +112,13 @@ This will hide the page from the rss feed so that it will not appear in there. Y
 ``` toml
 rssHide = true
 ``` 
+
+### listHide
+Used in the _index.md for a section it will not list any other posts within the section.
+
+``` toml
+listHide = true
+```
 
 ### metadata
 
