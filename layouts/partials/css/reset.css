@@ -82,13 +82,36 @@ th, td {
   vertical-align: middle;
 }
 
+/*blockquote::before {
+  content: "\201C";
+  display: block;
+  font-size: 80px;
+  left: -20px;
+  top: -30px;
+  position: relative;
+  height: 0;
+}
+
+blockquote::after {
+  content: "\201D";
+  display: block;
+  font-size: 80px;
+  left: -20px;
+  top: -20px;
+  position: relative;
+  height: 0;
+}*/
+
+
 blockquote {
-  padding: 1rem 1rem 0 1rem;
-  margin: 1rem 0 1rem 0;
-  border-top: 1px solid {{ .Get "color_textDefault" }};
-  border-bottom: 1px solid {{ .Get "color_textDefault" }};
-  color: {{ .Get "color_textDefault" }};
+  padding: 0.5rem 1rem 0.1rem;
   font-weight: bold;
+  font-style: italic;
+  /*font-size: 1em;*/
+  margin-bottom: 1rem;
+  color: {{ .Get "accent" }};
+  border-left: .25rem solid {{ .Get "accent" }};
+  display: block;
 }
 
 a { text-decoration: none; }
