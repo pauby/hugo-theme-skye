@@ -48,7 +48,6 @@
       <div id="post-content">
         {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
         {{ .Content }}
-        {{ partial "post_tags.html" . }}
         {{ partial "sharing.html" . }}
   		</div>
     </article>
