@@ -23,7 +23,6 @@ You can find more details on certain features by scrolling down past this list
   - Categories list
   - Recent posts list
   - Post tags list (sorted by most common)
-  - Patreon banner
   - Twitter timeline
 - Optional [authorbox](#authorbox) on post pages
 - `_index.md` support for all list pages, including custom content and hiding the list
@@ -103,7 +102,6 @@ PygmentsStyle = "monokai" # Use "igor" for light backgrounds
     articleRecent = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
-    patreon = "https://patreon.com/shadow53" # Enable "Patreon" widget
     tagCount = true # Enable tag count on tag widgets
     upcoming_events = false
     my_twitterFeed = true

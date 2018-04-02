@@ -425,15 +425,6 @@ This adds your twitter timeline to the sidebar and shows the last tweets from yo
 twitterFeed = 3
 ```
 
-### patreon
-
-Show a Patreon banner in the sidebar linking to the URL specified here.
-Note: Since this is originally a dark theme, the banner used is white. Eventually I will get around to making it configurable
-
-``` toml
-patreon = "https://patreon.com/shadow53"
-```
-
 ### Social Icons - [Params.Social]
 
 BluestNight supports linking to a number of popular social sites from icons in the site footer. If the service normally uses usernames prefixed with an "@", your username should be entered *without* one.

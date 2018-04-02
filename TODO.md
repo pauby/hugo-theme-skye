@@ -12,8 +12,9 @@
 
 ## Widgets
 
-- [ ] Fix authorbox social-icons colour
-- [ ] Remove / replace patreon banner with freetext box
+- [x] Fix authorbox social-icons colour
+- [x] Remove / replace patreon banner with 
+- [ ] Add a freetext box
 - [ ] Add explanation for upcoming_events (also see [this](https://gohugo.io/templates/introduction/))
 
 ## Misc
