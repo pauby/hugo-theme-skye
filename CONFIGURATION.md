@@ -189,6 +189,13 @@ This is your [Font Awesome CDN Embed Code](http://fontawesome.io/get-started/). 
 
 See [fontawesome](#fontawesome) for more information.
 
+### readingtimeHide
+This hides the 'Estimated reading time' for an individual post. Note that this can be overriden on a post basis using the same configuration variable name in the frontmatter.)
+
+``` toml
+readingtimeHide = true
+```
+
 ## Configuration - [Params.Fonts]
 
 This section is for configuration of the sites fonts.
@@ -423,15 +430,6 @@ This adds your twitter timeline to the sidebar and shows the last tweets from yo
 ``` 
 # Show the last 3 tweets from my twitter feed
 twitterFeed = 3
-```
-
-### patreon
-
-Show a Patreon banner in the sidebar linking to the URL specified here.
-Note: Since this is originally a dark theme, the banner used is white. Eventually I will get around to making it configurable
-
-``` toml
-patreon = "https://patreon.com/shadow53"
 ```
 
 ### Social Icons - [Params.Social]

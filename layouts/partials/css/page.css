@@ -26,9 +26,9 @@
 	margin: 0px auto;
 }
 
-#site-container div {
+/*#site-container div {
   margin: 0;
-}
+}*/
 
 body {
   background-color: {{ .Get "page_bg" }};
@@ -105,7 +105,7 @@ pre code {
 }
 
 #main-container {
-  margin: 2rem 0.5rem;
+  margin: auto;
   padding: 15px 20px 20px;
 }
 
