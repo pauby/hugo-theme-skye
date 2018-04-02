@@ -3,17 +3,17 @@
 /* Custom fonts */
 @import url("css/fonts/stylesheet.css");
 
-{{ $.Scratch.Set "page_bg" "#000000" }}         {{ $.Scratch.Set "main_bg" "#050505" }}{{ $.Scratch.Set "alt_bg" "#252525" }}
-{{ $.Scratch.Set "textDefault" "#e2e2e2" }}     {{ $.Scratch.Set "textAlt" "#ffffff" }}
-{{ $.Scratch.Set "accent" "#2c8cef" }}          {{ $.Scratch.Set "textHeader" "#e2e2e2" }}
+{{ $.Scratch.Set "page_bg" "#000000" }}         {{ $.Scratch.Set "colr_main_bg" "#050505" }}{{ $.Scratch.Set "colr_alt_bg" "#252525" }}
+{{ $.Scratch.Set "textDefault" "#e2e2e2" }}     {{ $.Scratch.Set "colr_alt_text" "#ffffff" }}
+{{ $.Scratch.Set "accent" "#2c8cef" }}          {{ $.Scratch.Set "colr_header_text" "#e2e2e2" }}
 
-{{ with $.Site.Params.color.backgroundPage }}   {{ $.Scratch.Set "page_bg" . }}        {{ end }}
-{{ with $.Site.Params.color.backgroundWindow }} {{ $.Scratch.Set "main_bg" . }}        {{ end }}
-{{ with $.Site.Params.color.backgroundAlt }}    {{ $.Scratch.Set "alt_bg" . }}         {{ end }}
-{{ with $.Site.Params.color.textDefault }}      {{ $.Scratch.Set "color_textDefault" . }}      {{ end }}
-{{ with $.Site.Params.color.textAlt }}          {{ $.Scratch.Set "textAlt" . }}  {{ end }}
-{{ with $.Site.Params.color.accent }}           {{ $.Scratch.Set "accent" . }}         {{ end }}
-{{ with $.Site.Params.color.textHeader }}       {{ $.Scratch.Set "textHeader" . }}    {{ end }}
+{{ with $.Site.Params.color.backgroundPage }}   {{ $.Scratch.Set "colr_page_bg" . }}        {{ end }}
+{{ with $.Site.Params.color.backgroundWindow }} {{ $.Scratch.Set "colr_main_bg" . }}        {{ end }}
+{{ with $.Site.Params.color.backgroundAlt }}    {{ $.Scratch.Set "colr_alt_bg" . }}         {{ end }}
+{{ with $.Site.Params.color.textDefault }}      {{ $.Scratch.Set "colr_default_text" . }}   {{ end }}
+{{ with $.Site.Params.color.textAlt }}          {{ $.Scratch.Set "colr_alt_text" . }}       {{ end }}
+{{ with $.Site.Params.color.accent }}           {{ $.Scratch.Set "colr_accent" . }}         {{ end }}
+{{ with $.Site.Params.color.textHeader }}       {{ $.Scratch.Set "colr_header_text" . }}    {{ end }}
 
 {{ with $.Site.Params.fonts.default }}          {{ $.Scratch.Set "font_default" . }}    {{ end }}
 {{ with $.Site.Params.fonts.postHeader }}       {{ $.Scratch.Set "font_postHeader" . }}    {{ end }}

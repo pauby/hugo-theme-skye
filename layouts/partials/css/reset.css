@@ -109,8 +109,8 @@ blockquote {
   font-style: italic;
   /*font-size: 1em;*/
   margin-bottom: 1rem;
-  color: {{ .Get "accent" }};
-  border-left: .25rem solid {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
+  border-left: .25rem solid {{ .Get "colr_accent" }};
   display: block;
 }
 

@@ -10,7 +10,7 @@
   
   padding: 1rem 10% 1rem 10%; 
 
-  background-color: {{ .Get "alt_bg" }};
+  background-color: {{ .Get "colr_alt_bg" }};
 }
 
 #main-nav .button {
@@ -23,22 +23,22 @@
 }
 
 #main-nav, #main-nav a {
-  color: {{ .Get "textAlt" }};
+  color: {{ .Get "colr_alt_text" }};
 }
 
 #main-nav .button:hover a, #main-nav a:hover,
 #main-nav .button.active a, #main-nav a.active {
-  color: {{ .Get "textHeader" }};
+  color: {{ .Get "colr_header_text" }};
 }
 
 #main-nav .is-dropdown-submenu {
-   border-color: {{ .Get "accent" }};
+   border-color: {{ .Get "colr_accent" }};
 }
 
 #menu-toggle {
   padding-left: 10px;
-  background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "textAlt" }}
+  background-color: {{ .Get "colr_alt_bg" }};
+  color: {{ .Get "colr_alt_text" }}
 }
 
 .nav-arrow {

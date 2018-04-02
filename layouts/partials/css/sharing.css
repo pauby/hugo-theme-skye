@@ -3,7 +3,7 @@
     margin: auto;
     text-align: center;
     border-style: solid hidden;
-    border-color: {{ .Get "textAlt" }};
+    border-color: {{ .Get "colr_alt_text" }};
     border-width: 1px;
     padding: 1.5rem 0 1.5rem 0;
 }

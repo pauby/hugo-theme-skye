@@ -2,11 +2,11 @@
 
 .widget header {
   margin: 0.5rem 0;
-  border-bottom: 3px solid {{ .Get "accent" }};
+  border-bottom: 3px solid {{ .Get "colr_accent" }};
 }
 
 .widget ul li {
-  border-bottom: 1px dotted {{ .Get "textAlt" }};
+  border-bottom: 1px dotted {{ .Get "colr_alt_text" }};
   padding: 0.2rem;
   font-size: 1rem;
 }
@@ -25,12 +25,12 @@
 #authorbox #social-icons a:visited,
 #authorbox #social-icons a:active,
 #authorbox #social-icons a:focus {
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
   text-decoration: none;
 }
 
 #authorbox #social-icons a:hover {
-  color: {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
 }
 
 #authorbox .authorname {
@@ -39,15 +39,15 @@
 }
 
 .memberbox {
-  background-color: {{ .Get "main_bg" }};
-  color: {{ .Get "color_textDefault" }};
+  background-color: {{ .Get "colr_main_bg" }};
+  color: {{ .Get "colr_default_text" }};
   padding: 1rem 0.7rem;
-  border-bottom: 1px solid {{ .Get "textAlt" }};
+  border-bottom: 1px solid {{ .Get "colr_alt_text" }};
   flex-wrap: nowrap;
 }
 
 #authorbox .top-border {
-  border-top: 1px solid {{ .Get "textAlt" }};
+  border-top: 1px solid {{ .Get "colr_alt_text" }};
 }
 
 #authorbox .padding-bottom {
@@ -55,7 +55,7 @@
 }
 
 #authorbox img {
-  border: 3px solid {{ .Get "textAlt" }};
+  border: 3px solid {{ .Get "colr_alt_text" }};
 }
 
 .member-avatar {
