@@ -2,6 +2,18 @@
 
 Changes only recorded from v0.50
 
+# 0.61.0
+
+* Updated documentation for listHide, eventUpcoming and readingtimeHide;
+* Removed page banner for smaller screens;
+* Adjusted the main container size for large and medium screens;
+* Changed the post headers and metadata to be left aligned by default when displaying the post and in a list;
+* Fixed issue with events widget not referencing correct eventUpcoming configuration variable;
+* Removed patreon widget and CSS;
+* Added readingtimeHide configuration variable that will hide the 'Estimated reading time' metadata for a post. This can be specified in the config file to be applied site wide. It can also be specified in the frontmatter of a post which will override the site wide configuration;
+* Post tags now display in the post metadata and have been removed from the bottom of a post;
+* Fixed an issue where there would be a large gap between the bottom of a list and the next text;
+* Made <!doctype> uppercase;
 # 0.60.1
 
 * Replaced configuration name `hide_list` with `listHide`;
