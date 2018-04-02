@@ -29,18 +29,24 @@ li img {
 }
 
 #page-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
-#page-header #post-metadata {
+#page-header .metadata {
   justify-content: left;
+  margin: 0;
+  font-size: 0.75rem;
+  color: {{ .Get "color_textDefault" }};
 }
 
-#post-metadata time {
+#page-header .metadata time {
+  margin-right: 1rem; 
+}
+
+.metadata #reading-time {
   margin-right: 1rem;
 }
-
 /* Site main - taxonomy list */
 
 .taxonomy-item {
