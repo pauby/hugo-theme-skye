@@ -2,6 +2,10 @@
 
 Changes only recorded from v0.50
 
+# 0.61.1
+
+* Removed the localhost checking within the Google Analytics Javascript code and replaced with with the new Hugo .Site.IsServer;
+
 # 0.61.0
 
 * Updated documentation for listHide, eventUpcoming and readingtimeHide;
