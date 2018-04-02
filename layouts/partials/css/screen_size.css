@@ -32,6 +32,10 @@
 .small-text-right { text-align: right; }
 .small-text-center { text-align: center; }
 
+.small-post-banner {
+  display: none;
+}
+
 @media only screen and (max-width: 639px) {
 
   #main-nav { display: none; }
@@ -120,6 +124,24 @@
   .medium-text-right { text-align: right; }
   .medium-text-center { text-align: center; }
 
+  .medium-post-banner {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 400px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%; 
+    min-width: 1200px; 
+    min-height: 400px; 
+    width: 100%;
+  }
+
   /* Horizontal menu styling */
 
   #menu-toggle { display: none; }
@@ -181,6 +203,10 @@
 
 /* Large screens */
 @media only screen and (min-width: 1366px) {
+  #main-container {
+      width: 85rem;
+  }
+
   .large-full {
     flex: 0 0 100%;
     width: 100%;
@@ -223,4 +249,22 @@
   .large-text-left { text-align: left; }
   .large-text-right { text-align: right; }
   .large-text-center { text-align: center; }
+
+  .large-post-banner {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 400px;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      max-width: 100%;
+      min-width: 1200px;
+      min-height: 400px;
+      width: 100%;
+  }
 }
