@@ -109,7 +109,8 @@ table tbody tr {
   margin-right: auto
 }
 
-#post-content ul {
+#post-content ul,
+#post-content ol {
     margin-bottom: 0rem;
 }
 
