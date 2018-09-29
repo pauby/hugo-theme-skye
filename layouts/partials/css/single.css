@@ -1,7 +1,7 @@
 /* Site main - single */
 
 #post-metadata a {
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
 }
 
 #post-tags .menu {
@@ -37,7 +37,7 @@ li img {
   justify-content: left;
   margin: 0;
   font-size: 0.75rem;
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
 }
 
 #page-header .metadata time {
@@ -60,8 +60,8 @@ li img {
 
 #TableOfContents {
   display: inline-block;
-  background-color: {{ .Get "alt_bg" }};
-  border: 1px solid {{ .Get "accent" }};
+  background-color: {{ .Get "colr_alt_bg" }};
+  border: 1px solid {{ .Get "colr_accent" }};
   padding: 5px;
   margin-bottom: 25px;
 }
@@ -73,34 +73,34 @@ li img {
 }
 
 #TableOfContents a {
-  color: {{ .Get "textAlt" }};
+  color: {{ .Get "colr_alt_text" }};
 }
 
 /* Tables */
 
 table, table thead th, table tbody td {
-  border: 1px solid {{ .Get "color_textDefault" }};
+  border: 1px solid {{ .Get "colr_default_text" }};
   border-collapse: collapse;
 }
 
 table thead th {
-  background-color: {{ .Get "accent" }};
-  color: {{ .Get "textHeader" }};
+  background-color: {{ .Get "colr_accent" }};
+  color: {{ .Get "colr_header_text" }};
 }
 
 table thead th a, table thead th a:hover {
-  color: {{ .Get "textHeader" }};
+  color: {{ .Get "colr_header_text" }};
   text-decoration: underline;
 }
 
 table tbody tr {
-  color: {{ .Get "color_textDefault" }};
-  background-color: {{ .Get "main_bg" }};
+  color: {{ .Get "colr_default_text" }};
+  background-color: {{ .Get "colr_main_bg" }};
 }
 
 /*table tbody tr:nth-child(even) {
-  background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "textAlt" }};
+  background-color: {{ .Get "colr_alt_bg" }};
+  color: {{ .Get "colr_alt_text" }};
 }*/
 
 #post-content .thumbnail img {
@@ -109,7 +109,8 @@ table tbody tr {
   margin-right: auto
 }
 
-#post-content ul {
+#post-content ul,
+#post-content ol {
     margin-bottom: 0rem;
 }
 

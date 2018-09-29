@@ -1,13 +1,13 @@
 /* Entire page */
 
 ::-moz-selection {
-  color: {{ .Get "textHeader" }};
-  background-color: {{ .Get "accent" }};
+  color: {{ .Get "colr_header_text" }};
+  background-color: {{ .Get "colr_accent" }};
 }
 
 ::selection {
-  color: {{ .Get "color_textDefault" }};
-  background-color: {{ .Get "accent" }};
+  color: {{ .Get "colr_default_text" }};
+  background-color: {{ .Get "colr_accent" }};
 }
 
 /* Apply hover animation on anything that changes text or background color */
@@ -20,8 +20,8 @@
 
 #site-container {
   margin: auto;
-  background-color: {{ .Get "main_bg" }};
-  color: {{ .Get "color_textDefault" }};
+  background-color: {{ .Get "colr_main_bg" }};
+  color: {{ .Get "colr_default_text" }};
   width: 100%;
 	margin: 0px auto;
 }
@@ -31,7 +31,7 @@
 }*/
 
 body {
-  background-color: {{ .Get "page_bg" }};
+  background-color: {{ .Get "colr_page_bg" }};
   background-attachment: fixed;
   {{ if (not (eq (.Get "background_src") "")) }}
   background-image: url("{{ .Get "background_src" }}");
@@ -43,28 +43,28 @@ body {
 /* Site header */
 
 #site-header ::-moz-selection, .tag ::-moz-selection {
-  color: {{ .Get "color_textDefault" }};
-  background-color: {{ .Get "main_bg" }};
+  color: {{ .Get "colr_default_text" }};
+  background-color: {{ .Get "colr_main_bg" }};
 }
 
 #site-header ::selection, .tag ::selection {
-  color: {{ .Get "color_textDefault" }};
-  background-color: {{ .Get "main_bg" }};
+  color: {{ .Get "colr_default_text" }};
+  background-color: {{ .Get "colr_main_bg" }};
 }
 
 header a:hover, header a:active, header a:focus {
   text-decoration: underline;
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
 }
 
 header a:link, header a:visited, #site-header header a:hover, #site-header header a:active {
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
   text-decoration: none;
 }
 
 #site-header {
-  background-color: {{ .Get "accent" }};
-  color: {{ .Get "textHeader" }};
+  background-color: {{ .Get "colr_accent" }};
+  color: {{ .Get "colr_header_text" }};
 }
 
 #site-header header {
@@ -74,7 +74,7 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 #site-title, #site-tagline {
   font-weight: bold;
   display:inline-block;
-  color: {{ .Get "textHeader" }};
+  color: {{ .Get "colr_header_text" }};
 }
 
 #site-title {
@@ -85,7 +85,7 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
 #site-tagline {
   font-size: 1.2rem;
   padding-top: 0.5rem;
-  border-top: 1px solid {{ .Get "textHeader" }};
+  border-top: 1px solid {{ .Get "colr_header_text" }};
 }
 
 code {
@@ -94,7 +94,7 @@ code {
 
 pre {
   padding: 1.2rem;
-  background-color: {{ .Get "alt_bg" }};
+  background-color: {{ .Get "colr_alt_bg" }};
   font-size: 1rem;
   overflow-x: scroll;
   margin-bottom: 1em;
@@ -114,11 +114,11 @@ main a:hover, aside a:hover {
 }
 
 main a, main a:hover {
-  color: {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
 }
 
 main header a:hover, main header a:active, main header a:focus {
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
 }
 
 /* Sidebar */
@@ -128,7 +128,7 @@ aside {
 }
 
 aside a:link, aside a:visited {
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
   text-decoration: none;
 }
 
@@ -140,9 +140,9 @@ aside a:hover, aside a:active, aside a:focus {
 
 footer {
   padding: 0.5rem 1rem;
-  background-color: {{ .Get "alt_bg" }};
+  background-color: {{ .Get "colr_alt_bg" }};
   border-top: 3px solid #999999;
-  color: {{ .Get "textAlt" }};
+  color: {{ .Get "colr_alt_text" }};
 }
 
 footer p {
@@ -150,12 +150,12 @@ footer p {
 }
 
 footer a {
-  color: {{ .Get "textAlt" }};
+  color: {{ .Get "colr_alt_text" }};
   text-decoration: underline;
 }
 
 footer a:hover {
-  color: {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
 }
 
 #social-icons {
@@ -166,12 +166,12 @@ footer a:hover {
 #social-icons a:visited,
 #social-icons a:active,
 #social-icons a:focus {
-  color: {{ .Get "textAlt" }};
+  color: {{ .Get "colr_alt_text" }};
   text-decoration: none;
 }
 
 #social-icons a:hover {
-  color: {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
 }
 
 #attribution {
@@ -219,5 +219,5 @@ figcaption a {
 }
 
 figcaption a:hover {
-  color: {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
 }

@@ -1,5 +1,5 @@
 #post-list article {
-  border-bottom: 1px solid {{ .Get "textAlt" }};
+  border-bottom: 1px solid {{ .Get "colr_alt_text" }};
 }
 
 #post-list .media-object-section {
@@ -25,7 +25,7 @@
 #post-list .metadata {
   margin: 0;
   font-size: 0.75rem;
-  color: {{ .Get "color_textDefault" }};
+  color: {{ .Get "colr_default_text" }};
 }
 
 #post-list .metadata time {
@@ -36,15 +36,15 @@
 
 .pagination .pagination-previous a,
 .pagination .pagination-next a {
-  color: {{ .Get "accent" }};
+  color: {{ .Get "colr_accent" }};
 }
 
 .pagination .pagination-previous a:hover,
 .pagination .pagination-next a:hover {
-  color: {{ .Get "textHeader" }};
-  background-color: {{ .Get "accent" }};
+  color: {{ .Get "colr_header_text" }};
+  background-color: {{ .Get "colr_accent" }};
 }
 
 .metadata {
-  color: {{ .Get "accent" }}
+  color: {{ .Get "colr_accent" }}
 }

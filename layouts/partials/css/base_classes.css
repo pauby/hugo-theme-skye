@@ -57,8 +57,8 @@
 }
 
 .pagination:hover {
-  background-color: {{ .Get "accent" }};
-  color: {{ .Get "textHeader" }};
+  background-color: {{ .Get "colr_accent" }};
+  color: {{ .Get "colr_header_text" }};
 }
 
 .button {
@@ -70,12 +70,12 @@
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   display: inline-block;
-  background-color: {{ .Get "alt_bg" }};
-  color: {{ .Get "textAlt" }} !important;
+  background-color: {{ .Get "colr_alt_bg" }};
+  color: {{ .Get "colr_alt_text" }} !important;
 }
 
 .button:hover, .button:focus, .button:active, .button.active {
-  background-color: {{ .Get "accent" }};
-  color: {{ .Get "textHeader" }};
+  background-color: {{ .Get "colr_accent" }};
+  color: {{ .Get "colr_header_text" }};
   cursor: pointer;
 }

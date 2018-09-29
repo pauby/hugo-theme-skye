@@ -2,6 +2,12 @@
 
 Changes only recorded from v0.50
 
+# 0.61.2
+
+* Changed the internal names of variables in index.css;
+* Fixed an issue where there would be a large gap between the bottom of an ordered list and the next text;
+* Fixed an issue where the url in the tag and category widget was malformed;
+
 # 0.61.1
 
 * Removed the localhost checking within the Google Analytics Javascript code and replaced with with the new Hugo .Site.IsServer;
