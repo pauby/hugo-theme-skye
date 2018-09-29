@@ -7,7 +7,7 @@
 	</header>
 	<ul>
 		{{ range $key, $val := first 5 .Site.Taxonomies.categories.ByCount }}
-		<li><a href="{{ $.Site.BaseURL }}categories/{{ $val.Name | urlize | lower }}">{{ $val.Name | title }}</a></li>
+		<li><a href="{{ $.Site.BaseURL }}/categories/{{ $val.Name | urlize | lower }}">{{ $val.Name | title }}</a></li>
 		{{ end }}
 	</ul>
 </div>
