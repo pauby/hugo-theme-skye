@@ -138,3 +138,10 @@ PygmentsUseClasses = true
 PygmentsCodeFences = true
 cssAddHead = ["/css/myHighlighter.css"]
 ```
+
+## Creating a release
+
+A release needs to be tagged:
+
+* `git tag <RELEASE VERSION> master`
+* `git push origin <RELEASE VERSION>`
