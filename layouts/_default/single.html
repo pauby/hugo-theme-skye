@@ -1,60 +1,61 @@
 {{ partial "header.html" . }}
-  {{ if .Params.thumbnail }}
-  <figure class="small-post-banner medium-post-banner large-post-banner" style="{{ with .Params.thumbnail_offset }}background-position: {{ . }}{{ end }}; background-image: url( {{ .Params.thumbnail }} );">
+{{ if .Params.thumbnail }}
+<figure>
+  <img class="small-post-banner medium-post-banner large-post-banner" src="{{ .Params.thumbnail }}" />
   {{ if .Params.thumbnailCaption }}
-    <figcaption>{{ .Params.thumbnailCaption | safeHTML }}</figcaption>
+  <figcaption>{{ .Params.thumbnailCaption | safeHTML }}</figcaption>
   {{ end }}
-  </figure>
-  <div id="main-container" class="row" role="main">
+</figure>
+<div id="main-container" class="row" role="main">
   {{ else }}
   <div id="main-container" class="row no-post-banner" role="main">
-  {{ end }}
-  {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
+    {{ end }}
+    {{ if .Site.Params.leftsidebar }}{{ partial "sidebar.html" . }}{{ end }}
 
-  <main class="row-item small-full medium-two-thirds large-three-quarters" style="padding-left: 0;">
-    <article id="post-article">
-      <header id="page-header">
-        <h1>{{ .Title }}</h1>
-        {{ if or (not .Date.IsZero) (.Params.categories) }}
-            <div class="metadata">
-          {{ if not .Date.IsZero }}
+    <main class="row-item small-full medium-two-thirds large-three-quarters" style="padding-left: 0;">
+      <article id="post-article">
+        <header id="page-header">
+          <h1>{{ .Title }}</h1>
+          {{ if or (not .Date.IsZero) (.Params.categories) }}
+          <div class="metadata">
+            {{ if not .Date.IsZero }}
             <i class="fa fa-clock-o fa-fw"></i>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{.Date.Format "02 January, 2006"}}</time>
-  	      {{ end }}
-<!--  				{{ if .Params.categories }}
-  				<span class="row-item">
-  					<i class="fi-folder"></i>
-  					{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "categories/" | absLangURL }}{{ . | urlize | lower }}" rel="category">{{ . }}</a>{{ end }}
+            {{ end }}
+            <!--  				{{ if .Params.categories }}
+          <span class="row-item">
+            <i class="fi-folder"></i>
+            {{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "categories/" | absLangURL }}{{ . | urlize | lower }}" rel="category">{{ . }}</a>{{ end }}
           </span>
                   {{ end }}-->
-          {{ if isset .Params "readingtimehide" }}
+            {{ if isset .Params "readingtimehide" }}
             {{ if not .Params.readingtimehide }}
-                <span id="reading-time"></i><i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes</span>
+            <span id="reading-time"></i><i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes</span>
             {{ end }}
-          {{ else if and (isset .Site.Params "readingtimehide") (not .Site.Params.readingtimehide) }}
-                <span id="reading-time"></i><i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes</span>
+            {{ else if and (isset .Site.Params "readingtimehide") (not .Site.Params.readingtimehide) }}
+            <span id="reading-time"></i><i class="fa fa-book fa-fw"></i>Estimated reading time: ~{{ .ReadingTime }} minutes</span>
+            {{ end }}
+            {{ range .Params.tags }}
+            <i class="fa fa-tag fa-fw"></i>
+            <a href="{{ " tags/ " | relLangURL }}{{ . | urlize }}/" rel="tag">{{ upper . }}</a>
+            </li>
+            {{ end }}
+          </div>
           {{ end }}
-          {{ range .Params.tags }}
-          <i class="fa fa-tag fa-fw"></i>
-          <a href="{{ " tags/ " | relLangURL }}{{ . | urlize }}/" rel="tag">{{ upper . }}</a>
-          </li>
-          {{ end }}
-        </div>
-  			{{ end }}
-      </header>
-      {{ if or (.Site.Params.authorboxTop) (.Params.authorboxTop) }}
+        </header>
+        {{ if or (.Site.Params.authorboxTop) (.Params.authorboxTop) }}
         {{ partial "authorbox.html" . }}
-      {{ end }}
-      <div id="post-content">
-        {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
-        {{ .Content }}
-        {{ partial "sharing.html" . }}
-  		</div>
-    </article>
-    {{ if and (not .Site.Params.authorboxTop) (not .Params.authorboxTop) }}
+        {{ end }}
+        <div id="post-content">
+          {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
+          {{ .Content }}
+          {{ partial "sharing.html" . }}
+        </div>
+      </article>
+      {{ if and (not .Site.Params.authorboxTop) (not .Params.authorboxTop) }}
       {{ partial "authorbox.html" . }}
-    {{ end }}
+      {{ end }}
       {{ partial "post_nav.html" . }}
-  	{{ partial "comments.html" . }}
-  </main>
-{{ partial "footer.html" . }}
+      {{ partial "comments.html" . }}
+    </main>
+    {{ partial "footer.html" . }}
