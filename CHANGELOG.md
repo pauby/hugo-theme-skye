@@ -2,6 +2,10 @@
 
 Changes only recorded from v0.50
 
+# 0.61.4
+
+* Banner caption not centred under image.
+
 # 0.61.3
 
 * Post banner image is no longer the full width of the browser window but is not centred across the page.
